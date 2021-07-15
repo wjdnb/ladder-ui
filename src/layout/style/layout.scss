@@ -1,0 +1,11 @@
+@import '@style/mixin';
+
+@include b(layout) {
+  display: flex;
+
+  flex: 1 1 auto;
+
+  @include when(vertical) {
+    flex-direction: column;
+  }
+}
