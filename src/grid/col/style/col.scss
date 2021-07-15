@@ -1,0 +1,14 @@
+@use "sass:math";
+
+@for $i from 0 through 24 {
+  .l-col-#{$i} {
+    max-width: (math.div(1, 24) * $i * 100) * 1%;
+    flex: 0 0 (math.div(1, 24) * $i * 100) * 1%;
+  }
+}
+
+@for $i from 0 through 24 {
+  .l-col-offset-#{$i} {
+    margin-left: (math.div(1, 24) * $i * 100) * 1%;
+  }
+}
