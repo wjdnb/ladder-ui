@@ -1,0 +1,5 @@
+@import '@style/mixin';
+
+@include b(aside) {
+  flex-shrink: 0;
+}
