@@ -1,27 +1,17 @@
 const path = require('path')
 
+function resolve(dir) {
+  return path.resolve(__dirname, dir)
+}
+
 module.exports = {
-  publicPath: '/docs',
-  css: {
-    loaderOptions: {
-      sass: {
-        implementation: require('sass'),
-      },
-    },
-  },
-  pages: {
-    index: {
-      entry: './docs/main.ts',
-      template: './docs/public/index.html',
-      favicon: './docs/public/favicon.png',
-    },
-  },
   configureWebpack: {
+    entry: './docs/main.ts',
     resolve: {
       alias: {
-        '~': path.resolve(__dirname, './docs'),
-        '@': path.resolve(__dirname, './src'),
-        '@style': path.resolve(__dirname, './src/_style'),
+        '~': resolve('docs'),
+        '@': resolve('src'),
+        '@style': resolve('src/_style'),
       },
     },
   },
