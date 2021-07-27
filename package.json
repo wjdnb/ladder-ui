@@ -8,7 +8,8 @@
     "build:component": "rollup --config ./build/rollup.config.bundle.js",
     "build:css": "webpack --config ./build/webpack.config.css.js && rimraf lib/temp.css",
     "build:all": "yarn clean:lib && yarn build:component && yarn build:css",
-    "test": "jest"
+    "test": "jest",
+    "build:doc": "yarn vue-cli-service build --mode production"
   },
   "module": "lib/es/index.js",
   "types": "lib/index.d.ts",

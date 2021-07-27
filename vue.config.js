@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  publicPath: '/docs',
+  publicPath: './',
   css: {
     loaderOptions: {
       sass: {
@@ -9,14 +9,8 @@ module.exports = {
       },
     },
   },
-  pages: {
-    index: {
-      entry: './docs/main.ts',
-      template: './docs/public/index.html',
-      favicon: './docs/public/favicon.png',
-    },
-  },
   configureWebpack: {
+    entry: './docs/main.ts',
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './docs'),
