@@ -4,6 +4,8 @@ dist
 docs/question&summary
 docs/README.md
 lib
+output.js
+vue.config.js
 
 # local env files
 .env.local

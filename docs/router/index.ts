@@ -1,5 +1,5 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Homepage from '../pages/homepage.vue'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import Index from '../pages/homepage.vue'
 import PublicSection from '../components/public-section.vue'
 import Install from '../pages/install.vue'
 import Grid from '../pages/grid.vue'
@@ -12,7 +12,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'homepage',
-    component: Homepage,
+    component: Index,
   },
   {
     path: '/docs',
@@ -59,7 +59,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('/'),
+  history: createWebHashHistory('/ladder'),
   routes,
 })
 
