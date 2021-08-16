@@ -1,0 +1,73 @@
+@import '@style/var.scss';
+
+.l-menu {
+  position: sticky;
+  top: 94px;
+
+  .group-title {
+    position: relative;
+
+    color: #00000073;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 16px 8px 40px;
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+      content: '';
+
+      width: calc(100% - 30px);
+      height: 1px;
+      background: $border;
+    }
+  }
+
+  ul {
+    li {
+      ul {
+        li {
+          position: relative;
+
+          height: 40px;
+          line-height: 40px;
+          padding: 0 20px 0 40px;
+          border-right: 2px solid;
+          border-right-color: transparent;
+          margin: 10px 0 10px 0px;
+
+          cursor: pointer;
+
+          transition: all 0.2s ease-in-out;
+
+          &.sidebar-active {
+            border-right-color: $danger;
+            a {
+              color: $danger;
+            }
+          }
+
+          &:hover {
+            a {
+              color: $danger;
+            }
+          }
+
+          a {
+            &:after {
+              position: absolute;
+              top: 0;
+              left: 0;
+
+              content: '';
+
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

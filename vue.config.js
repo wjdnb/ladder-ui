@@ -1,5 +1,4 @@
 const path = require('path')
-
 function resolve(dir) {
   return path.resolve(__dirname, dir)
 }
@@ -13,6 +12,21 @@ module.exports = {
         '@': resolve('src'),
         '@style': resolve('src/_style'),
       },
+    },
+    module: {
+      rules: [
+        {
+          test: /\.md$/,
+          use: [
+            {
+              loader: 'vue-loader',
+            },
+            {
+              loader: resolve('./build/md-loader/index.js'),
+            },
+          ],
+        },
+      ],
     },
   },
 }

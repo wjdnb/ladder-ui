@@ -1,0 +1,78 @@
+@import '@style/var.scss';
+@import '@style/mixin.scss';
+
+@include b(button) {
+  color: rgba(0, 0, 0, 0.65);
+  display: inline-flex;
+  align-items: center;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  line-height: 1;
+  font-weight: 400;
+
+  @include e(icon) {
+    margin-right: 10px;
+  }
+
+  span {
+    display: block;
+    text-align: center;
+  }
+
+  @include m(default) {
+    border: 1px solid $border-dark;
+
+    &:hover {
+      border: 1px solid $primary;
+      span {
+        color: $primary;
+      }
+    }
+  }
+
+  @include m(danger) {
+    border: 1px solid transparent;
+    background: $danger;
+
+    span {
+      color: #fff;
+    }
+
+    &:hover {
+      filter: brightness(110%);
+    }
+  }
+
+  @include m(primary) {
+    border: 1px solid transparent;
+    color: $primary;
+    background: $primary;
+    span {
+      color: #fff;
+    }
+
+    &:hover {
+      filter: brightness(110%);
+    }
+  }
+
+  @include m(disabled) {
+    background: #f5f5f5;
+    span {
+      color: rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  @include m(link) {
+    border: none;
+
+    span {
+      color: $primary;
+    }
+  }
+}

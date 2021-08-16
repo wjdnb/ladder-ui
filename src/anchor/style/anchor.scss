@@ -1,0 +1,6 @@
+@import '@style/mixin.scss';
+
+@include b(anchor) {
+  position: sticky;
+  top: 94px;
+}

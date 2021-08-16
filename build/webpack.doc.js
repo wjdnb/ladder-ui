@@ -49,6 +49,17 @@ module.exports = {
         use: 'babel-loader',
       },
       {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'vue-loader',
+          },
+          {
+            loader: resolve('./md-loader/index.js'),
+          },
+        ],
+      },
+      {
         test: /\.(sa|sc)ss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
