@@ -1,5 +1,5 @@
 <template>
-  <h1>完善中 ✍️</h1>
+  <demo-block></demo-block>
 </template>
 
 <script lang="ts">

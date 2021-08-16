@@ -47,7 +47,11 @@ export default defineComponent({
     })
 
     const classNames = computed(() => {
-      return className('l-space', `is-justify-${props.justify}`)
+      return className(
+        'l-space',
+        `is-justify-${props.justify}`,
+        `is-align-${props.align}`,
+      )
     })
 
     return () => {

@@ -1,0 +1,17 @@
+@import '@style/mixin.scss';
+
+@include b(tooltip) {
+  position: relative;
+
+  @include e(title) {
+    position: absolute;
+    // top: -30px;
+    padding: 6px 8px;
+    color: #fff;
+    background: #333;
+  }
+}
+
+p {
+  width: 200px;
+}

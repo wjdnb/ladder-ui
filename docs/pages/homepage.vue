@@ -47,6 +47,10 @@ $left-offset: 32px;
 
   padding: 10% 30% 0 8%;
   min-height: 100vh;
+
+  p {
+    margin: 0;
+  }
 }
 
 section {

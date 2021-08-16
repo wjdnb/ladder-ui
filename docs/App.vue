@@ -140,6 +140,15 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import './style/var.scss';
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -336,34 +345,12 @@ header {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
 a {
   text-decoration: none;
 }
 
 body {
   margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  list-style: none;
 }
 
 button {
@@ -379,4 +366,8 @@ button {
     /* IE6-IE8 */ url('./assets/font/Timmana.woff') format('woff'),
     /* Modern Browsers */ url('./assets/font/Timmana.ttf') format('truetype'); /* Safari, Android, iOS */
 }
+</style>
+
+<style lang="scss">
+@import './style/markdown.scss';
 </style>
