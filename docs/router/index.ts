@@ -1,12 +1,21 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Index from '../pages/homepage.vue'
-import PublicSection from '../components/public-section.vue'
-import Install from '../pages/install.vue'
-import Grid from '../pages/grid.vue'
-import Layout from '../pages/layout.vue'
-import Divider from '../pages/divider.vue'
-import Space from '../pages/space.vue'
-import Introduction from '../pages/introduction.vue'
+import Template from '../components/template.vue'
+
+import Debug from '../pages/debug.vue'
+
+import Install from '../pages/install.md'
+import Introduction from '../pages/introduction.md'
+
+import Grid from '@/grid/demo/grid.md'
+import Layout from '@/layout/demo/layout.md'
+import Divider from '@/divider/demo/divider.md'
+import Space from '@/space/demo/space.md'
+import Anchor from '@/anchor/demo/anchor.md'
+import Menu from '@/menu/demo/menu.md'
+import Message from '@/message/demo/message.md'
+import Tooltip from '@/tooltip/demo/tooltip.md'
+import Button from '@/button/demo/button.md'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -15,8 +24,13 @@ const routes: Array<RouteRecordRaw> = [
     component: Index,
   },
   {
+    path: '/debug',
+    name: 'debug',
+    component: Debug,
+  },
+  {
     path: '/docs',
-    component: PublicSection,
+    component: Template,
     children: [
       {
         path: 'introduction',
@@ -32,7 +46,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/component',
-    component: PublicSection,
+    component: Template,
     children: [
       {
         path: 'divider',
@@ -54,6 +68,31 @@ const routes: Array<RouteRecordRaw> = [
         name: 'space',
         component: Space,
       },
+      {
+        path: 'anchor',
+        name: 'anchor',
+        component: Anchor,
+      },
+      {
+        path: 'menu',
+        name: 'menu',
+        component: Menu,
+      },
+      {
+        path: 'message',
+        name: 'message',
+        component: Message,
+      },
+      {
+        path: 'tooltip',
+        name: 'tooltip',
+        component: Tooltip,
+      },
+      {
+        path: 'button',
+        name: 'button',
+        component: Button,
+      },
     ],
   },
 ]
@@ -61,6 +100,10 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHashHistory('/ladder'),
   routes,
+  scrollBehavior() {
+    // 始终滚动到顶部
+    return { top: 0 }
+  },
 })
 
 export default router
