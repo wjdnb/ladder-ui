@@ -13,9 +13,15 @@ export default defineComponent({
     },
   },
   setup(props) {
+    const scroll = (id: any) => {
+      // let height = ref<HTMLElement | null>(null)
+      const height = document.querySelector(`#${id}`)
+      console.log(height?.scrollHeight)
+    }
+
     return () => (
       <div class="l-anchor-link">
-        <span>{props.title}</span>
+        <span onClick={() => scroll(props.href)}>{props.title}</span>
       </div>
     )
   },

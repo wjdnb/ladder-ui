@@ -5,13 +5,8 @@
 
   @include e(title) {
     position: absolute;
-    // top: -30px;
     padding: 6px 8px;
     color: #fff;
     background: #333;
   }
-}
-
-p {
-  width: 200px;
 }

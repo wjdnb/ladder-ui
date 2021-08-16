@@ -109,10 +109,16 @@ export default defineComponent({
 
     padding-top: 30px;
     padding-bottom: 20px;
+
+    .l-demo__example {
+      flex: 1 1 auto;
+    }
   }
 
   @include e(toolbar) {
-    cursor: pointer;
+    .svg {
+      cursor: pointer;
+    }
 
     padding-top: 10px;
     padding-bottom: 20px;

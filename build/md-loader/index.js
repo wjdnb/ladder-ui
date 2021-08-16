@@ -5,9 +5,9 @@ const md = require('./config')
 module.exports = function (source) {
   const content = md.render(source)
 
-  const startTag = '<!--element-demo:'
+  const startTag = '!--demo:'
   const startTagLen = startTag.length
-  const endTag = ':element-demo-->'
+  const endTag = ':demo--'
   const endTagLen = endTag.length
 
   let componenetsString = ''
@@ -24,8 +24,8 @@ module.exports = function (source) {
     const html = stripTemplate(commentContent)
     const script = stripScript(commentContent)
     let demoComponentContent = genInlineComponentText(html, script)
-    const demoComponentName = `element-demo${id}`
-    output.push(`<template #code><${demoComponentName} /></template>`)
+    const demoComponentName = `demo${id}`
+    output.push(`<template #example><${demoComponentName} /></template>`)
     componenetsString += `${JSON.stringify(
       demoComponentName,
     )}: ${demoComponentContent},`

@@ -2,39 +2,37 @@
 
 ## 基本使用
 
-`asdasdas` asdasdsasadas hello here
+使用 `text-align` 属性调整文字位置。
+
 :::demo
 
 ```html
-<l-space>
-  <button>1</button>
-  <button>2</button>
-  <button>3</button>
-</l-space>
-```
-
-```js
-import {defineComponent} from 'vue'；
-export default defineComponent({})
+<template>
+  <l-divider text-align="left">21312312</l-divider>
+  <l-divider text-align="center">21312312</l-divider>
+  <l-divider text-align="right">21312312</l-divider>
+</template>
 ```
 
 :::
 
+## 虚线
+
+使用 `dashed` 属性将分割线改为虚线
+
 :::demo
 
-## demo2
-
 ```html
-<l-space>
-  <button>1</button>
-  <button>2</button>
-  <button>3</button>
-</l-space>
-```
-
-```js
-import {defineComponent} from 'vue'；
-export default defineComponent({})
+<template>
+  <l-divider dashed>21312312</l-divider>
+</template>
 ```
 
 :::
+
+## API
+
+| 参数         | 说明         | 类型      | 可选值                    | 默认值   |
+| ------------ | ------------ | --------- | ------------------------- | -------- |
+| `text-align` | 调整文字位置 | `string`  | `left`, `center` ,`right` | `center` |
+| `dashed`     | 使用虚线     | `boolean` | `true`, `false`           | `false`  |

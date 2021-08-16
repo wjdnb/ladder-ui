@@ -2,10 +2,10 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Index from '../pages/homepage.vue'
 import PublicSection from '../components/public-section.vue'
 import Install from '../pages/install.md'
-import Grid from '../pages/grid.vue'
-import Layout from '../pages/layout.vue'
+import Grid from '../pages/grid.md'
+import Layout from '../pages/layout.md'
 import Divider from '../pages/divider.md'
-import Space from '../pages/space.vue'
+import Space from '../pages/space.md'
 import Introduction from '../pages/introduction.md'
 
 const routes: Array<RouteRecordRaw> = [

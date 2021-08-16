@@ -4,7 +4,7 @@
       <div class="main">
         <router-view></router-view>
       </div>
-      <div class="sidenav">
+      <div v-if="pageAnchor" class="sidenav">
         <l-anchor>
           <l-anchor-link
             v-for="item in pageAnchor"
@@ -19,14 +19,17 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
-
+import { defineComponent, ref, computed } from 'vue'
+import { useRoute } from 'vue-router'
+import anchors from './anchor'
 export default defineComponent({
   setup() {
-    let pageAnchor = ref([
-      { title: 'asdasd', href: '#asd' },
-      { title: 'asdas', href: '#qwe' },
-    ])
+    const route = computed(() => useRoute())
+
+    let pageAnchor = computed(() => {
+      const anchor = anchors.filter(item => item.name === route.value.name)
+      return anchor ? anchor[0]?.anchor : ''
+    })
 
     let activeIndex = ref(-1)
 
@@ -66,7 +69,7 @@ main {
 }
 
 footer {
-  margin: 0 -20px 0 -60px;
+  margin: 150px -20px 0 -60px;
 
   height: 300px;
   background: $theme;

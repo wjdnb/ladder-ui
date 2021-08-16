@@ -4,10 +4,10 @@ const md = require('./config')
 
 function source(source) {
   const content = md.render(source)
-
-  const startTag = '<!--element-demo:'
+  console.log(content)
+  const startTag = '!--demo:'
   const startTagLen = startTag.length
-  const endTag = ':element-demo-->'
+  const endTag = ':demo--'
   const endTagLen = endTag.length
 
   let componenetsString = ''
@@ -17,12 +17,16 @@ function source(source) {
 
   let commentStart = content.indexOf(startTag)
   let commentEnd = content.indexOf(endTag, commentStart + startTagLen)
+  console.log(commentStart, commentEnd)
   while (commentStart !== -1 && commentEnd !== -1) {
     output.push(content.slice(start, commentStart))
 
     const commentContent = content.slice(commentStart + startTagLen, commentEnd)
     const html = stripTemplate(commentContent)
     const script = stripScript(commentContent)
+
+    console.log(stripTemplate, stripScript)
+
     let demoComponentContent = genInlineComponentText(html, script)
     const demoComponentName = `element-demo${id}`
     output.push(`<template #source><${demoComponentName} /></template>`)
@@ -69,4 +73,12 @@ function source(source) {
   return result
 }
 
-source(console.log(source))
+const fs = require('fs')
+const path = require('path')
+
+const qwe = fs.readFileSync(
+  path.resolve(__dirname, '../../docs/pages/divider.md'),
+  'utf8',
+)
+
+source(md.render(qwe))
