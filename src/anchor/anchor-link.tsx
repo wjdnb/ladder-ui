@@ -14,9 +14,15 @@ export default defineComponent({
   },
   setup(props) {
     const scroll = (id: any) => {
-      // let height = ref<HTMLElement | null>(null)
-      const height = document.querySelector(`#${id}`)
-      console.log(height?.scrollHeight)
+      const element = document.querySelector(`#${id}`)
+      const headerHeight = document.querySelector('header')?.clientHeight ?? 0
+      element?.scrollIntoView()
+
+      const scrolledY = window.scrollY
+
+      if (scrolledY) {
+        window.scroll(0, scrolledY - headerHeight - 20)
+      }
     }
 
     return () => (

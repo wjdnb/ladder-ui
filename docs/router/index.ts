@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Index from '../pages/homepage.vue'
-import PublicSection from '../components/public-section.vue'
+import Template from '../components/template.vue'
+
 import Install from '../pages/install.md'
 import Grid from '../pages/grid.md'
 import Layout from '../pages/layout.md'
@@ -16,7 +17,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/docs',
-    component: PublicSection,
+    component: Template,
     children: [
       {
         path: 'introduction',
@@ -32,7 +33,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/component',
-    component: PublicSection,
+    component: Template,
     children: [
       {
         path: 'divider',

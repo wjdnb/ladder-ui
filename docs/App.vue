@@ -26,66 +26,13 @@
     </div>
   </header>
   <div class="wrapper">
-    <aside v-if="!isHomePage">
-      <ul>
-        <li v-for="(item, index) in sidebarList" :key="index">
-          <div class="group-title">{{ item.groupName }}</div>
-          <ul>
-            <li
-              v-for="(group, key) in item.groups"
-              :key="key"
-              :class="{
-                'sidebar-active': routePath === group.link,
-              }"
-            >
-              <router-link :to="group.link">{{ group.name }}</router-link>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </aside>
-    <section>
-      <router-view />
-    </section>
+    <router-view />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
-
-const componentList = [
-  {
-    groupName: '布局组件',
-    groups: [
-      { name: '分割线', link: '/component/divider' },
-      { name: '栅格', link: '/component/grid' },
-      { name: '布局', link: '/component/layout' },
-      { name: '间距', link: '/component/space' },
-    ],
-  },
-]
-
-const docList = [
-  {
-    groupName: '介绍',
-    groups: [
-      {
-        name: 'Ladder UI',
-        link: '/docs/introduction',
-      },
-    ],
-  },
-  {
-    groupName: '快速上手',
-    groups: [
-      {
-        name: '安装',
-        link: '/docs/install',
-      },
-    ],
-  },
-]
 
 export default defineComponent({
   setup() {
@@ -104,18 +51,6 @@ export default defineComponent({
       },
     ])
 
-    const sidebarList = computed(() => {
-      if (route.path.includes('component')) {
-        return componentList
-      } else if (route.path.includes('docs')) {
-        return docList
-      }
-
-      return []
-    })
-
-    const isHomePage = computed((): boolean => route.name === 'homepage')
-
     const routePath = computed(() => {
       return route.path
     })
@@ -126,11 +61,7 @@ export default defineComponent({
 
     return {
       navList,
-      isHomePage,
       routePath,
-      sidebarList,
-      componentList,
-      docList,
       translate,
     }
   },
@@ -140,19 +71,11 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import './style/var.scss';
 
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  list-style: none;
-}
-
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1;
+  width: 100vw;
 
   display: flex;
   justify-content: space-between;
@@ -252,85 +175,8 @@ header {
 }
 
 .wrapper {
-  display: flex;
-  margin-top: 40px;
-
-  aside {
-    flex: 0 1 300px;
-    background: #fff;
-    border-right: 1px solid $border;
-
-    .group-title {
-      position: relative;
-
-      color: #00000073;
-      font-size: 13px;
-      font-weight: bold;
-      padding: 8px 16px 8px 40px;
-
-      &:after {
-        position: absolute;
-        bottom: 0;
-        left: 15px;
-        content: '';
-
-        width: calc(100% - 30px);
-        height: 1px;
-        background: $border;
-      }
-    }
-
-    ul {
-      li {
-        ul {
-          li {
-            position: relative;
-
-            height: 40px;
-            line-height: 40px;
-            padding: 0 20px 0 40px;
-            border-right: 2px solid;
-            border-right-color: transparent;
-            margin: 10px 0 10px 0px;
-
-            cursor: pointer;
-
-            transition: all 0.2s ease-in-out;
-
-            &.sidebar-active {
-              border-right-color: $theme;
-              a {
-                color: $theme;
-              }
-            }
-
-            &:hover {
-              a {
-                color: $theme;
-              }
-            }
-
-            a {
-              &:after {
-                position: absolute;
-                top: 0;
-                left: 0;
-
-                content: '';
-
-                width: 100%;
-                height: 100%;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  section {
-    flex: 1 1 auto;
-  }
+  position: relative;
+  padding-top: 64px;
 }
 </style>
 
@@ -359,6 +205,15 @@ button {
   background: transparent;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
 @font-face {
   font-family: 'Timmana';
   src: url('./assets/font/Timmana.woff2'); /* IE9 Compat Modes */
@@ -366,8 +221,4 @@ button {
     /* IE6-IE8 */ url('./assets/font/Timmana.woff') format('woff'),
     /* Modern Browsers */ url('./assets/font/Timmana.ttf') format('truetype'); /* Safari, Android, iOS */
 }
-</style>
-
-<style lang="scss">
-@import './style/markdown.scss';
 </style>

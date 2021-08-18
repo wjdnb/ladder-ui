@@ -60,7 +60,7 @@ module.exports = function (source) {
   output.push(content.slice(start))
   const result = `
   <template>
-    <div class="doc">
+    <div class="doc markdown-wrapper">
       ${output.join('')}
     </div>
   </template>
