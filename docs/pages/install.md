@@ -1,13 +1,25 @@
-# 安装
+# 完善中 ✍️
 
-`npm i ladder-ui -D`
+<!-- # 安装
 
-`yarn add ladder-ui -D`
+## npm
 
-## 引入
+```code
+npm i ladder-ui -D
+```
 
-`import LadderUI from 'ladder-ui'`
+## yarn
 
-`import 'ladder-ui/lib/index.css'`
+```code
+yarn add ladder-ui -D
+```
 
-`Vue.use(LadderUI)`
+## 项目内引入
+
+```code
+  import LadderUI from 'ladder-ui'
+
+  import 'ladder-ui/lib/index.css'
+
+  Vue.use(LadderUI)
+``` -->

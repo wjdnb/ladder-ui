@@ -1,0 +1,42 @@
+@import '@style/var.scss';
+
+.markdown-wrapper {
+  table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    thead {
+      tr {
+        background: rgba(#efefef, 0.7);
+      }
+    }
+
+    tbody {
+      tr {
+        transition: all 0.3s;
+        &:hover {
+          background: rgba(#efefef, 0.3);
+        }
+      }
+    }
+
+    th,
+    td {
+      padding: 12px;
+    }
+  }
+
+  p,
+  th,
+  td {
+    code {
+      margin: 0 2px;
+      padding: 0 5px;
+      border: 1px solid #eaeaea;
+      background-color: #f8f8f8;
+      border-radius: 3px;
+    }
+  }
+}

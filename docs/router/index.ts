@@ -9,6 +9,10 @@ import Divider from '../pages/divider.md'
 import Space from '../pages/space.md'
 import Introduction from '../pages/introduction.md'
 
+import Anchor from '../pages/anchor.md'
+import Menu from '../pages/menu.md'
+import Message from '../pages/message.md'
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -55,6 +59,21 @@ const routes: Array<RouteRecordRaw> = [
         name: 'space',
         component: Space,
       },
+      {
+        path: 'anchor',
+        name: 'anchor',
+        component: Anchor,
+      },
+      {
+        path: 'menu',
+        name: 'menu',
+        component: Menu,
+      },
+      {
+        path: 'message',
+        name: 'message',
+        component: Message,
+      },
     ],
   },
 ]
@@ -62,6 +81,10 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHashHistory('/ladder'),
   routes,
+  scrollBehavior() {
+    // 始终滚动到顶部
+    return { top: 0 }
+  },
 })
 
 export default router

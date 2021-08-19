@@ -47,12 +47,14 @@ export default defineComponent({
 
     return () => {
       return (
-        <pre>
-          <code
-            class={classNames.value}
-            innerHTML={highlightedCode.value}
-          ></code>
-        </pre>
+        <div class="l-code">
+          <pre>
+            <code
+              class={classNames.value}
+              innerHTML={highlightedCode.value}
+            ></code>
+          </pre>
+        </div>
       )
     }
   },

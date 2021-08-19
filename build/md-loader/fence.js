@@ -13,6 +13,10 @@ module.exports = md => {
       return `<template #code><l-code code="${md.utils.escapeHtml(
         token.content,
       )}"></l-code></template>`
+    } else if (token.info === 'code') {
+      return `<l-code :autodetect="false" language="js" code="${md.utils.escapeHtml(
+        token.content,
+      )}"></l-code>`
     }
     return defaultRender(tokens, idx, options, env, self)
   }

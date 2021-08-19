@@ -1,12 +1,23 @@
 const componentList = [
   {
-    groupName: '布局组件',
+    groupName: '布局',
     groups: [
       { name: '分割线', link: '/component/divider' },
       { name: '栅格', link: '/component/grid' },
       { name: '布局', link: '/component/layout' },
       { name: '间距', link: '/component/space' },
     ],
+  },
+  {
+    groupName: '导航',
+    groups: [
+      { name: '导航菜单', link: '/component/menu' },
+      { name: '锚点', link: '/component/anchor' },
+    ],
+  },
+  {
+    groupName: '反馈',
+    groups: [{ name: '全局提示', link: '/component/message' }],
   },
 ]
 

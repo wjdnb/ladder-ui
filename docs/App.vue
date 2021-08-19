@@ -36,8 +36,6 @@ import { useRoute } from 'vue-router'
 
 export default defineComponent({
   setup() {
-    const route = useRoute()
-
     const navList = ref([
       {
         name: '文档',
@@ -51,9 +49,7 @@ export default defineComponent({
       },
     ])
 
-    const routePath = computed(() => {
-      return route.path
-    })
+    const routePath = computed(() => useRoute().path)
 
     const translate = () => {
       alert('完善中✍️')
