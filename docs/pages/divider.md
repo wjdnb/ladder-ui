@@ -1,4 +1,4 @@
-# divider
+# Divider
 
 ## 基本使用
 

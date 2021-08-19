@@ -1,4 +1,4 @@
-# space
+# Space
 
 ## 基本使用
 
@@ -18,7 +18,7 @@
 
 ## 调整间距
 
-使用 size 属性调整间距
+使用 `size` 属性调整间距，预设`small`, `medium`, `large`类型，也可以设置数值
 
 :::demo
 
@@ -76,5 +76,4 @@
 | --------- | ------------ | ------------------ | ------------------------------------------------------------------- | -------- |
 | `justify` | 调整文字位置 | `string`           | `flex-start`, `center` ,`flex-end`, `space-between`, `space-around` | `center` |
 | `size`    | 调整间距     | `string`, `number` | `small`, `medium`, `large`, `number`                                | `medium` |
-| `split`   | 使用虚线     | `any`              | `any`                                                               | `false`  |
-| `align`   | 使用虚线     | `string`           | `flex-end`, `flex-start`                                            | `center` |
+| `split`   | 自定义分割符 | `any`              | `any`                                                               | `false`  |
