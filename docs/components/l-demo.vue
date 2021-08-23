@@ -141,7 +141,7 @@ export default defineComponent({
 
 <style lang="scss">
 @import '@style/mixin.scss';
-@import '../style/var.scss';
+@import '@style/var.scss';
 @include b(demo) {
   border: 1px solid $border;
 

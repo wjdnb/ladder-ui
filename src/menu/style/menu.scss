@@ -42,15 +42,15 @@
           transition: all 0.2s ease-in-out;
 
           &.sidebar-active {
-            border-right-color: $theme;
+            border-right-color: $danger;
             a {
-              color: $theme;
+              color: $danger;
             }
           }
 
           &:hover {
             a {
-              color: $theme;
+              color: $danger;
             }
           }
 

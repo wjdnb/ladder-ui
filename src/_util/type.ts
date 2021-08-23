@@ -16,3 +16,5 @@ export type JustifyContent =
   | 'flex-end'
   | 'space-between'
   | 'space-around'
+
+export type Type = 'primary' | 'success' | 'warning' | 'error' | 'link' | 'info'

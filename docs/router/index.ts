@@ -2,6 +2,8 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Index from '../pages/homepage.vue'
 import Template from '../components/template.vue'
 
+import Test from '../pages/test.vue'
+
 import Install from '../pages/install.md'
 import Grid from '../pages/grid.md'
 import Layout from '../pages/layout.md'
@@ -12,12 +14,19 @@ import Introduction from '../pages/introduction.md'
 import Anchor from '../pages/anchor.md'
 import Menu from '../pages/menu.md'
 import Message from '../pages/message.md'
+import Tooltip from '../pages/tooltip.md'
+import Button from '../pages/button.md'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'homepage',
     component: Index,
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: Test,
   },
   {
     path: '/docs',
@@ -73,6 +82,16 @@ const routes: Array<RouteRecordRaw> = [
         path: 'message',
         name: 'message',
         component: Message,
+      },
+      {
+        path: 'tooltip',
+        name: 'tooltip',
+        component: Tooltip,
+      },
+      {
+        path: 'button',
+        name: 'button',
+        component: Button,
       },
     ],
   },

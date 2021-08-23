@@ -1,10 +1,14 @@
 const componentList = [
   {
+    groupName: '通用',
+    groups: [{ name: '按钮', link: '/component/button' }],
+  },
+  {
     groupName: '布局',
     groups: [
-      { name: '分割线', link: '/component/divider' },
-      { name: '栅格', link: '/component/grid' },
       { name: '布局', link: '/component/layout' },
+      { name: '栅格', link: '/component/grid' },
+      { name: '分割线', link: '/component/divider' },
       { name: '间距', link: '/component/space' },
     ],
   },
@@ -17,7 +21,10 @@ const componentList = [
   },
   {
     groupName: '反馈',
-    groups: [{ name: '全局提示', link: '/component/message' }],
+    groups: [
+      { name: '全局提示', link: '/component/message' },
+      { name: '文字提示', link: '/component/tooltip' },
+    ],
   },
 ]
 

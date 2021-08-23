@@ -64,7 +64,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '../style/var.scss';
+@import '@style/var.scss';
 
 aside {
   width: 300px;
@@ -98,7 +98,7 @@ main {
 
 footer {
   height: 300px;
-  background: $theme;
+  background: $danger;
 
   margin-top: 50px;
 }

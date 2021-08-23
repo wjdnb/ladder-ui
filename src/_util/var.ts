@@ -8,4 +8,4 @@ export const JUSTIFY_CONTENT = [
 
 export const ALIGN_ITEMS = ['flex-start', 'center', 'flex-end']
 
-export const SIZE = ['mini', 'small', 'medium', 'large']
+export const SIZE = ['small', 'medium', 'large']

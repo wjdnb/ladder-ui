@@ -37,7 +37,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '../style/var.scss';
+@import '@style/var.scss';
 
 $left-offset: 32px;
 
@@ -58,7 +58,7 @@ section {
     .ladder {
       &:hover {
         p {
-          color: $theme;
+          color: $danger;
           transform: translateY(-56px);
         }
       }
@@ -69,7 +69,7 @@ section {
         text-transform: uppercase;
         font-smooth: antialiased;
 
-        color: $nav-focus;
+        color: $danger;
         transition: all 0.4s ease-in-out;
       }
 
@@ -111,7 +111,7 @@ section {
       text-transform: uppercase;
 
       color: #fff;
-      background: $theme;
+      background: $danger;
       outline: none;
       border: none;
       cursor: pointer;
@@ -135,6 +135,6 @@ section {
 footer {
   width: 100%;
   height: 300px;
-  background: $theme;
+  background: $danger;
 }
 </style>

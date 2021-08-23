@@ -65,7 +65,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import './style/var.scss';
+@import '@style/var.scss';
 
 header {
   position: fixed;
@@ -117,18 +117,18 @@ header {
           transition: all 0.2s ease-in-out;
 
           &.nav-active {
-            border-bottom-color: $theme;
+            border-bottom-color: $danger;
 
             a {
-              color: $theme;
+              color: $danger;
             }
           }
 
           &:hover {
-            border-bottom-color: $theme;
+            border-bottom-color: $danger;
 
             a {
-              color: $theme;
+              color: $danger;
             }
           }
 
@@ -177,7 +177,7 @@ header {
 </style>
 
 <style lang="scss">
-@import './style/var.scss';
+@import '@style/var.scss';
 * {
   color: $text;
   box-sizing: border-box;
