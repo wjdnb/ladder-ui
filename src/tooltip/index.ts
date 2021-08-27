@@ -1,3 +1,3 @@
-import LTooltip from './tooltip'
+import LTooltip from './tooltip.vue'
 
 export { LTooltip }

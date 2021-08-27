@@ -1,23 +1,20 @@
 <template>
   <div class="test">
-    <l-space>
-      <l-button type="primary" size="mini" @click="here">Mini</l-button>
-      <l-button type="primary" size="small">Small</l-button>
-      <l-button type="primary" size="medium">Medium</l-button>
-      <l-button type="primary" :size="size">Large</l-button>
-      <l-button round type="primary" size="mini">Mini</l-button>
-      <l-button round type="primary" size="small">Small</l-button>
-      <l-button round type="link" size="medium" disabled>Medium</l-button>
-      <l-button round type="primary" :size="size">Large</l-button>
-    </l-space>
-
-    <l-space> </l-space>
+    <l-tooltip>
+      <template #title>qwe</template>
+      <l-button>Default</l-button>
+      <LDemo>asdasd</LDemo>
+    </l-tooltip>
   </div>
 </template>
 
 <script lang="ts">
+import LDemo from '../components/l-demo.vue'
 import { defineComponent } from 'vue'
 export default defineComponent({
+  components: {
+    LDemo,
+  },
   data() {
     return {
       size: 'large',

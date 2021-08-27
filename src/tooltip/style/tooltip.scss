@@ -3,8 +3,12 @@
 @include b(tooltip) {
   position: relative;
 
+  display: inline-block;
+
   @include e(title) {
     position: absolute;
+    top: -45px;
+    left: 0;
     padding: 6px 8px;
     color: #fff;
     background: #333;

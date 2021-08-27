@@ -1,6 +1,10 @@
 import { defineComponent, computed } from 'vue'
 import className from '@/_util/className'
 import styleName from '@/_util/styleName'
+
+
+
+
 export default defineComponent({
   name: 'LButton',
   props: {
@@ -68,7 +72,6 @@ export default defineComponent({
         textSize.get(props.size),
       )
     })
-
     return () => (
       <button
         class={buttonClass.value}

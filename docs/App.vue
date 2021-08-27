@@ -54,7 +54,6 @@ export default defineComponent({
     const translate = () => {
       alert('完善中✍️')
     }
-
     return {
       navList,
       routePath,
@@ -101,7 +100,6 @@ header {
       ul {
         display: flex;
         justify-content: space-around;
-
         li {
           position: relative;
 
