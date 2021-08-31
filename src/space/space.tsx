@@ -1,9 +1,26 @@
-import { defineComponent, PropType, computed, VNode, CSSProperties } from 'vue'
+import { defineComponent, computed } from 'vue'
+import type { ExtractPropTypes, CSSProperties, PropType, VNode } from 'vue'
 import className from '../_util/className'
-import { Size, AlignItems } from '../_util/type'
+import { Size, AlignItems, JustifyContent } from '../_util/type'
 import { isString, isNumber } from '../_util/assertion'
 
-export type SizeType = number | Size
+const spaceProps = {
+  align: {
+    type: String as PropType<AlignItems>,
+    default: 'center',
+  },
+  split: {
+    type: [String, Number],
+  },
+  size: {
+    type: [Number, String] as PropType<number | Size>,
+    default: 'medium',
+  },
+  justify: {
+    type: String as PropType<JustifyContent>,
+    default: 'flex-start',
+  },
+}
 
 const sizeMap = new Map([
   ['mini', 4],
@@ -12,25 +29,10 @@ const sizeMap = new Map([
   ['large', 16],
 ])
 
+export type SpaceProps = Partial<ExtractPropTypes<typeof spaceProps>>
+
 export default defineComponent({
-  props: {
-    align: {
-      type: String as PropType<AlignItems>,
-      default: 'center',
-    },
-    split: {
-      type: [Number, String],
-      default: '',
-    },
-    size: {
-      type: [Number, String] as PropType<SizeType>,
-      default: 'small',
-    },
-    justify: {
-      type: String,
-      default: 'flex-start',
-    },
-  },
+  props: spaceProps,
   setup(props, { slots }) {
     const gap = computed(() => {
       let margin

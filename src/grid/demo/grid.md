@@ -9,24 +9,22 @@
 ```html
 <template>
   <l-row>
-    <l-col><div class="grid">1</div></l-col>
+    <l-col><div class="grid"></div></l-col>
   </l-row>
 
   <l-row>
-    <l-col :span="8"><div class="grid">2</l-col>
-    <l-col :span="8"><div class="grid">3</l-col>
-    <l-col :span="8"><div class="grid">4</l-col>
+    <l-col :span="8"><div class="grid"></div></l-col>
+    <l-col :span="8"><div class="grid"></div></l-col>
+    <l-col :span="8"><div class="grid"></div></l-col>
   </l-row>
 </template>
 
 <style>
   .grid {
     padding: 20px;
-    background-color: #333;
+    background: #333;
   }
-
 </style>
-
 ```
 
 :::

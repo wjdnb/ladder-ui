@@ -17,4 +17,4 @@ export type JustifyContent =
   | 'space-between'
   | 'space-around'
 
-export type Type = 'primary' | 'success' | 'warning' | 'error' | 'link' | 'info'
+export type Type = 'default' | 'primary' | 'danger' | 'link'

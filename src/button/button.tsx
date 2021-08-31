@@ -1,49 +1,52 @@
 import { defineComponent, computed } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
 import className from '@/_util/className'
 import styleName from '@/_util/styleName'
+import { Size, Type } from '@/_util/type'
 
+const buttonProps = {
+  type: {
+    type: String as PropType<Type>,
+    default: 'default',
+  },
+  size: {
+    type: String as PropType<Size>,
+    default: 'medium',
+  },
+  space: {
+    type: Number,
+    default: 0,
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
+  round: {
+    type: Boolean,
+    default: false,
+  },
+}
 
+const buttonPadding = new Map([
+  ['mini', 'padding: 4px 7px'],
+  ['small', 'padding: 6px 12px'],
+  ['medium', 'padding: 8px 14px'],
+  ['large', 'padding: 10px 22px'],
+])
 
+const textSize = new Map([
+  ['mini', 'font-size: 12px'],
+  ['small', 'font-size: 14px'],
+  ['medium', 'font-size: 14px'],
+  ['large', 'font-size: 15px'],
+])
+
+export type ButtonProps = Partial<ExtractPropTypes<typeof buttonProps>>
 
 export default defineComponent({
   name: 'LButton',
-  props: {
-    type: {
-      type: String,
-      default: 'default',
-    },
-    size: {
-      type: String,
-      default: 'medium',
-    },
-    space: {
-      type: Number,
-      default: 0,
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    round: {
-      type: Boolean,
-      default: false,
-    },
-  },
+  props: buttonProps,
   setup(props, { slots }) {
-    const buttonPadding = new Map([
-      ['mini', 'padding: 4px 7px'],
-      ['small', 'padding: 6px 12px'],
-      ['medium', 'padding: 8px 14px'],
-      ['large', 'padding: 10px 22px'],
-    ])
-
-    const textSize = new Map([
-      ['mini', 'font-size: 12px'],
-      ['small', 'font-size: 14px'],
-      ['medium', 'font-size: 14px'],
-      ['large', 'font-size: 15px'],
-    ])
-
     const buttonClass = computed(() => {
       if (props.disabled) {
         return className('l-button', `l-button--disabled`)

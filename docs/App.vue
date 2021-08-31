@@ -44,7 +44,7 @@ export default defineComponent({
       },
       {
         name: '组件',
-        link: '/component/divider',
+        link: '/component/button',
         sign: 'component',
       },
     ])

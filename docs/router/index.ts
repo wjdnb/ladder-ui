@@ -2,20 +2,20 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Index from '../pages/homepage.vue'
 import Template from '../components/template.vue'
 
-import Test from '../pages/test.vue'
+import Debug from '../pages/debug.vue'
 
 import Install from '../pages/install.md'
-import Grid from '../pages/grid.md'
-import Layout from '../pages/layout.md'
-import Divider from '../pages/divider.md'
-import Space from '../pages/space.md'
 import Introduction from '../pages/introduction.md'
 
-import Anchor from '../pages/anchor.md'
-import Menu from '../pages/menu.md'
-import Message from '../pages/message.md'
-import Tooltip from '../pages/tooltip.md'
-import Button from '../pages/button.md'
+import Grid from '@/grid/demo/grid.md'
+import Layout from '@/layout/demo/layout.md'
+import Divider from '@/divider/demo/divider.md'
+import Space from '@/space/demo/space.md'
+import Anchor from '@/anchor/demo/anchor.md'
+import Menu from '@/menu/demo/menu.md'
+import Message from '@/message/demo/message.md'
+import Tooltip from '@/tooltip/demo/tooltip.md'
+import Button from '@/button/demo/button.md'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -24,9 +24,9 @@ const routes: Array<RouteRecordRaw> = [
     component: Index,
   },
   {
-    path: '/test',
-    name: 'test',
-    component: Test,
+    path: '/debug',
+    name: 'debug',
+    component: Debug,
   },
   {
     path: '/docs',
