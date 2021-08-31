@@ -9,6 +9,9 @@
   <img alt="NPM" src="https://img.shields.io/npm/l/ladder-ui?style=flat-square">
 </p>
 
+## Documentation
+
+To view the document, visit [https://hgwxxdd.github.io/ladder-ui](https://hgwxxdd.github.io/ladder-ui/)
 
 ## Feature
 
@@ -22,9 +25,9 @@ Every great thing is nothing but a lot of little ones.
 
 ❌  &ensp; Add 30+ components
 
-❌  &ensp; Add documentation
-
 ❌  &ensp; Add unit test
+
+❌  &ensp; Update documentation
 
 ❌  &ensp; On demand
 

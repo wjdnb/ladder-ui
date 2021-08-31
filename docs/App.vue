@@ -26,27 +26,7 @@
     </div>
   </header>
   <div class="wrapper">
-    <aside v-if="!isHomePage">
-      <ul>
-        <li v-for="(item, index) in sidebarList" :key="index">
-          <div class="group-title">{{ item.groupName }}</div>
-          <ul>
-            <li
-              v-for="(group, key) in item.groups"
-              :key="key"
-              :class="{
-                'sidebar-active': routePath === group.link,
-              }"
-            >
-              <router-link :to="group.link">{{ group.name }}</router-link>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </aside>
-    <section>
-      <router-view />
-    </section>
+    <router-view />
   </div>
 </template>
 
@@ -54,43 +34,8 @@
 import { defineComponent, ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
 
-const componentList = [
-  {
-    groupName: '布局组件',
-    groups: [
-      { name: '分割线', link: '/component/divider' },
-      { name: '栅格', link: '/component/grid' },
-      { name: '布局', link: '/component/layout' },
-      { name: '间距', link: '/component/space' },
-    ],
-  },
-]
-
-const docList = [
-  {
-    groupName: '介绍',
-    groups: [
-      {
-        name: 'Ladder UI',
-        link: '/docs/introduction',
-      },
-    ],
-  },
-  {
-    groupName: '快速上手',
-    groups: [
-      {
-        name: '安装',
-        link: '/docs/install',
-      },
-    ],
-  },
-]
-
 export default defineComponent({
   setup() {
-    const route = useRoute()
-
     const navList = ref([
       {
         name: '文档',
@@ -99,38 +44,19 @@ export default defineComponent({
       },
       {
         name: '组件',
-        link: '/component/divider',
+        link: '/component/button',
         sign: 'component',
       },
     ])
 
-    const sidebarList = computed(() => {
-      if (route.path.includes('component')) {
-        return componentList
-      } else if (route.path.includes('docs')) {
-        return docList
-      }
-
-      return []
-    })
-
-    const isHomePage = computed((): boolean => route.name === 'homepage')
-
-    const routePath = computed(() => {
-      return route.path
-    })
+    const routePath = computed(() => useRoute().path)
 
     const translate = () => {
       alert('完善中✍️')
     }
-
     return {
       navList,
-      isHomePage,
       routePath,
-      sidebarList,
-      componentList,
-      docList,
       translate,
     }
   },
@@ -138,12 +64,13 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import './style/var.scss';
+@import '@style/var.scss';
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1;
+  width: 100vw;
 
   display: flex;
   justify-content: space-between;
@@ -173,7 +100,6 @@ header {
       ul {
         display: flex;
         justify-content: space-around;
-
         li {
           position: relative;
 
@@ -189,18 +115,18 @@ header {
           transition: all 0.2s ease-in-out;
 
           &.nav-active {
-            border-bottom-color: $theme;
+            border-bottom-color: $danger;
 
             a {
-              color: $theme;
+              color: $danger;
             }
           }
 
           &:hover {
-            border-bottom-color: $theme;
+            border-bottom-color: $danger;
 
             a {
-              color: $theme;
+              color: $danger;
             }
           }
 
@@ -243,90 +169,13 @@ header {
 }
 
 .wrapper {
-  display: flex;
-  margin-top: 40px;
-
-  aside {
-    flex: 0 1 300px;
-    background: #fff;
-    border-right: 1px solid $border;
-
-    .group-title {
-      position: relative;
-
-      color: #00000073;
-      font-size: 13px;
-      font-weight: bold;
-      padding: 8px 16px 8px 40px;
-
-      &:after {
-        position: absolute;
-        bottom: 0;
-        left: 15px;
-        content: '';
-
-        width: calc(100% - 30px);
-        height: 1px;
-        background: $border;
-      }
-    }
-
-    ul {
-      li {
-        ul {
-          li {
-            position: relative;
-
-            height: 40px;
-            line-height: 40px;
-            padding: 0 20px 0 40px;
-            border-right: 2px solid;
-            border-right-color: transparent;
-            margin: 10px 0 10px 0px;
-
-            cursor: pointer;
-
-            transition: all 0.2s ease-in-out;
-
-            &.sidebar-active {
-              border-right-color: $theme;
-              a {
-                color: $theme;
-              }
-            }
-
-            &:hover {
-              a {
-                color: $theme;
-              }
-            }
-
-            a {
-              &:after {
-                position: absolute;
-                top: 0;
-                left: 0;
-
-                content: '';
-
-                width: 100%;
-                height: 100%;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  section {
-    flex: 1 1 auto;
-  }
+  position: relative;
+  padding-top: 64px;
 }
 </style>
 
 <style lang="scss">
-@import './style/var.scss';
+@import '@style/var.scss';
 * {
   color: $text;
   box-sizing: border-box;
@@ -334,15 +183,6 @@ header {
   &:not(h1, h2, h3, h4, h5, h6) {
     font-size: 14px;
   }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
 }
 
 a {
@@ -353,8 +193,10 @@ body {
   margin: 0;
 }
 
-p {
+button {
+  outline: none;
   margin: 0;
+  background: transparent;
 }
 
 ul {
@@ -364,12 +206,6 @@ ul {
 
 li {
   list-style: none;
-}
-
-button {
-  outline: none;
-  margin: 0;
-  background: transparent;
 }
 
 @font-face {

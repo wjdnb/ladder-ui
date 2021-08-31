@@ -18,7 +18,7 @@
       "~/*": ["docs/*"]
     },
     // 测试打包效果 暂用
-    "allowJs": true,
+    // "allowJs": true,
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [

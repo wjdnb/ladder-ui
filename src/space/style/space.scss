@@ -24,4 +24,16 @@
   @include when(justify-flex-end) {
     justify-content: flex-end;
   }
+
+  @include when(align-center) {
+    align-items: center;
+  }
+
+  @include when(align-flex-start) {
+    align-items: flex-start;
+  }
+
+  @include when(align-flex-end) {
+    align-items: flex-end;
+  }
 }
