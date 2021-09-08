@@ -1,38 +1,26 @@
 <template>
-  <div class="test">
-    <l-tooltip>
-      <template #title>qwe</template>
-      <l-button>Default</l-button>
-      <LDemo>asdasd</LDemo>
-    </l-tooltip>
-  </div>
-
-  <l-space>
-    <l-button>asd</l-button>
-    <l-button>asd</l-button>
-    <l-button>asdasd</l-button>
-  </l-space>
-
-  <l-row>
-    <l-col :span="8"><div class="grid">2</div></l-col>
-    <l-col :span="8"><div class="grid">3</div></l-col>
-    <l-col :span="8"><div class="grid">4</div></l-col>
-  </l-row>
+  <h1>here</h1>
+  <l-button @click="add">go</l-button>
 </template>
 
 <script lang="ts">
-import LDemo from '../components/l-demo.vue'
 import { defineComponent } from 'vue'
 export default defineComponent({
-  components: {
-    LDemo,
-  },
   data() {
     return {
       size: 'large',
+      num: 0,
     }
   },
+  mounted() {
+    console.log('here')
+  },
+
   methods: {
+    add() {
+      this.num++
+      console.log(this.num)
+    },
     here() {
       this.size = 'medium'
       console.log('asdas')

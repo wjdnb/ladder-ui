@@ -1,7 +1,7 @@
 <template>
   <main>
     <aside>
-      <l-menu :options="sidebarOptions"></l-menu>
+      <l-menu :options="sidebarOptions" @current-active="handleTitle"></l-menu>
     </aside>
 
     <section>
@@ -14,7 +14,8 @@
               :key="item.title"
               :title="item.title"
               :href="item.href"
-            ></l-anchor-link>
+            >
+            </l-anchor-link>
           </l-anchor>
         </nav>
       </div>
@@ -23,15 +24,14 @@
   </main>
 </template>
 <script lang="ts">
-import { defineComponent, computed } from 'vue'
+import { useTitle } from '@vueuse/core'
+import { defineComponent, computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import anchors from './anchor'
 import { docList, componentList } from './link'
 export default defineComponent({
   setup() {
     const route = computed(() => useRoute())
-
-    const routePath = computed(() => route.value.path)
 
     const sidebarOptions = computed(() => {
       if (route.value.path.includes('component')) {
@@ -43,21 +43,21 @@ export default defineComponent({
       return []
     })
 
+    const handleTitle = (val: any) => {
+      const title = useTitle()
+      title.value = `${val.en} | Ladder UI`
+    }
+
     let pageAnchor = computed(() => {
       console.log(route.value.name)
       const anchor = anchors.filter(item => item.name === route.value.name)
       return anchor ? anchor[0]?.anchor : ''
     })
 
-    const handleClick = (e: any) => {
-      console.log(e)
-    }
-
     return {
-      routePath,
       pageAnchor,
+      handleTitle,
       sidebarOptions,
-      handleClick,
     }
   },
 })
@@ -66,15 +66,16 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import '@style/var.scss';
 
-aside {
-  width: 300px;
-  background: #fff;
-  border-right: 1px solid $border;
-}
-
 main {
   display: flex;
   padding-top: 30px;
+
+  aside {
+    width: 300px;
+    background: #fff;
+    border-right: 1px solid $border;
+    flex: 0 0 300px;
+  }
 
   section {
     flex: 1 1 auto;
