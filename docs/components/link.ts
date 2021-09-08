@@ -1,29 +1,29 @@
 const componentList = [
   {
     groupName: '通用',
-    groups: [{ name: '按钮', link: '/component/button' }],
+    groups: [{ zh: '按钮', en: 'Button', path: '/component/button' }],
   },
   {
     groupName: '布局',
     groups: [
-      { name: '布局', link: '/component/layout' },
-      { name: '栅格', link: '/component/grid' },
-      { name: '分割线', link: '/component/divider' },
-      { name: '间距', link: '/component/space' },
+      { zh: '布局', en: 'Layout', path: '/component/layout' },
+      { zh: '栅格', en: 'Grid', path: '/component/grid' },
+      { zh: '分割线', en: 'Divider', path: '/component/divider' },
+      { zh: '间距', en: 'Space', path: '/component/space' },
     ],
   },
   {
     groupName: '导航',
     groups: [
-      { name: '导航菜单', link: '/component/menu' },
-      { name: '锚点', link: '/component/anchor' },
+      { zh: '导航菜单', en: 'Menu', path: '/component/menu' },
+      { zh: '锚点', en: 'Anchor', path: '/component/anchor' },
     ],
   },
   {
     groupName: '反馈',
     groups: [
-      { name: '全局提示', link: '/component/message' },
-      { name: '文字提示', link: '/component/tooltip' },
+      { zh: '全局提示', en: 'Message', path: '/component/message' },
+      { zh: '文字提示', en: 'Tooltip', path: '/component/tooltip' },
     ],
   },
 ]
@@ -33,8 +33,8 @@ const docList = [
     groupName: '介绍',
     groups: [
       {
-        name: 'Ladder UI',
-        link: '/docs/introduction',
+        zh: 'Ladder UI',
+        path: '/docs/introduction',
       },
     ],
   },
@@ -42,8 +42,8 @@ const docList = [
     groupName: '快速上手',
     groups: [
       {
-        name: '安装',
-        link: '/docs/install',
+        zh: '安装',
+        path: '/docs/install',
       },
     ],
   },

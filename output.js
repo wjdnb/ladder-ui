@@ -4,7 +4,7 @@
   output: {
     path: '/Users/hgwxxdd/coding/ladder-ui/dist',
     filename: 'js/[name].js',
-    publicPath: '',
+    publicPath: '/',
     chunkFilename: 'js/[name].js'
   },
   resolve: {
@@ -58,15 +58,15 @@
             loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/cache-loader/dist/cjs.js',
             options: {
               cacheDirectory: '/Users/hgwxxdd/coding/ladder-ui/node_modules/.cache/vue-loader',
-              cacheIdentifier: '69592e3c'
+              cacheIdentifier: '323ca734'
             }
           },
           /* config.module.rule('vue').use('vue-loader') */
           {
-            loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/vue-loader/dist/index.js',
+            loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js',
             options: {
               cacheDirectory: '/Users/hgwxxdd/coding/ladder-ui/node_modules/.cache/vue-loader',
-              cacheIdentifier: '69592e3c',
+              cacheIdentifier: '323ca734',
               babelParserPlugins: [
                 'jsx',
                 'classProperties',
@@ -516,54 +516,7 @@
               {
                 loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/sass-loader/dist/cjs.js',
                 options: {
-                  sourceMap: false,
-                  implementation: {
-                    render: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    renderSync: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    info: 'dart-sass\t1.34.1\t(Sass Compiler)\t[Dart]\ndart2js\t2.13.1\t(Dart Compiler)\t[Dart]',
-                    types: {
-                      Boolean: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Color: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      List: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Map: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Null: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Number: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      String: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Error: function Error() { [native code] }
-                    },
-                    NULL: {
-                      toString: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      }
-                    },
-                    TRUE: {
-                      value: true
-                    },
-                    FALSE: {
-                      value: false
-                    },
-                    cli_pkg_main_0_: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    }
-                  }
+                  sourceMap: false
                 }
               }
             ]
@@ -604,54 +557,7 @@
               {
                 loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/sass-loader/dist/cjs.js',
                 options: {
-                  sourceMap: false,
-                  implementation: {
-                    render: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    renderSync: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    info: 'dart-sass\t1.34.1\t(Sass Compiler)\t[Dart]\ndart2js\t2.13.1\t(Dart Compiler)\t[Dart]',
-                    types: {
-                      Boolean: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Color: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      List: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Map: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Null: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Number: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      String: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Error: function Error() { [native code] }
-                    },
-                    NULL: {
-                      toString: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      }
-                    },
-                    TRUE: {
-                      value: true
-                    },
-                    FALSE: {
-                      value: false
-                    },
-                    cli_pkg_main_0_: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    }
-                  }
+                  sourceMap: false
                 }
               }
             ]
@@ -692,54 +598,7 @@
               {
                 loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/sass-loader/dist/cjs.js',
                 options: {
-                  sourceMap: false,
-                  implementation: {
-                    render: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    renderSync: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    info: 'dart-sass\t1.34.1\t(Sass Compiler)\t[Dart]\ndart2js\t2.13.1\t(Dart Compiler)\t[Dart]',
-                    types: {
-                      Boolean: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Color: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      List: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Map: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Null: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Number: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      String: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Error: function Error() { [native code] }
-                    },
-                    NULL: {
-                      toString: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      }
-                    },
-                    TRUE: {
-                      value: true
-                    },
-                    FALSE: {
-                      value: false
-                    },
-                    cli_pkg_main_0_: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    }
-                  }
+                  sourceMap: false
                 }
               }
             ]
@@ -779,54 +638,7 @@
               {
                 loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/sass-loader/dist/cjs.js',
                 options: {
-                  sourceMap: false,
-                  implementation: {
-                    render: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    renderSync: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    info: 'dart-sass\t1.34.1\t(Sass Compiler)\t[Dart]\ndart2js\t2.13.1\t(Dart Compiler)\t[Dart]',
-                    types: {
-                      Boolean: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Color: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      List: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Map: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Null: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Number: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      String: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Error: function Error() { [native code] }
-                    },
-                    NULL: {
-                      toString: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      }
-                    },
-                    TRUE: {
-                      value: true
-                    },
-                    FALSE: {
-                      value: false
-                    },
-                    cli_pkg_main_0_: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    }
-                  }
+                  sourceMap: false
                 }
               }
             ]
@@ -878,53 +690,6 @@
                 loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/sass-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  implementation: {
-                    render: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    renderSync: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    info: 'dart-sass\t1.34.1\t(Sass Compiler)\t[Dart]\ndart2js\t2.13.1\t(Dart Compiler)\t[Dart]',
-                    types: {
-                      Boolean: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Color: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      List: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Map: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Null: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Number: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      String: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Error: function Error() { [native code] }
-                    },
-                    NULL: {
-                      toString: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      }
-                    },
-                    TRUE: {
-                      value: true
-                    },
-                    FALSE: {
-                      value: false
-                    },
-                    cli_pkg_main_0_: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    }
-                  },
                   sassOptions: {
                     indentedSyntax: true
                   }
@@ -969,53 +734,6 @@
                 loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/sass-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  implementation: {
-                    render: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    renderSync: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    info: 'dart-sass\t1.34.1\t(Sass Compiler)\t[Dart]\ndart2js\t2.13.1\t(Dart Compiler)\t[Dart]',
-                    types: {
-                      Boolean: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Color: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      List: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Map: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Null: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Number: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      String: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Error: function Error() { [native code] }
-                    },
-                    NULL: {
-                      toString: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      }
-                    },
-                    TRUE: {
-                      value: true
-                    },
-                    FALSE: {
-                      value: false
-                    },
-                    cli_pkg_main_0_: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    }
-                  },
                   sassOptions: {
                     indentedSyntax: true
                   }
@@ -1060,53 +778,6 @@
                 loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/sass-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  implementation: {
-                    render: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    renderSync: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    info: 'dart-sass\t1.34.1\t(Sass Compiler)\t[Dart]\ndart2js\t2.13.1\t(Dart Compiler)\t[Dart]',
-                    types: {
-                      Boolean: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Color: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      List: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Map: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Null: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Number: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      String: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Error: function Error() { [native code] }
-                    },
-                    NULL: {
-                      toString: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      }
-                    },
-                    TRUE: {
-                      value: true
-                    },
-                    FALSE: {
-                      value: false
-                    },
-                    cli_pkg_main_0_: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    }
-                  },
                   sassOptions: {
                     indentedSyntax: true
                   }
@@ -1150,53 +821,6 @@
                 loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/sass-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  implementation: {
-                    render: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    renderSync: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    },
-                    info: 'dart-sass\t1.34.1\t(Sass Compiler)\t[Dart]\ndart2js\t2.13.1\t(Dart Compiler)\t[Dart]',
-                    types: {
-                      Boolean: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Color: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      List: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Map: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Null: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      },
-                      Number: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      String: function () {
-                        return _call(f, this, Array.prototype.slice.apply(arguments));
-                      },
-                      Error: function Error() { [native code] }
-                    },
-                    NULL: {
-                      toString: function () {
-                        return _call(f, Array.prototype.slice.apply(arguments));
-                      }
-                    },
-                    TRUE: {
-                      value: true
-                    },
-                    FALSE: {
-                      value: false
-                    },
-                    cli_pkg_main_0_: function () {
-                      return _call(f, Array.prototype.slice.apply(arguments));
-                    }
-                  },
                   sassOptions: {
                     indentedSyntax: true
                   }
@@ -1565,7 +1189,7 @@
             options: {
               cacheCompression: false,
               cacheDirectory: '/Users/hgwxxdd/coding/ladder-ui/node_modules/.cache/babel-loader',
-              cacheIdentifier: '6293eb2e'
+              cacheIdentifier: '1ec0909b'
             }
           }
         ]
@@ -1579,7 +1203,7 @@
             loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/cache-loader/dist/cjs.js',
             options: {
               cacheDirectory: '/Users/hgwxxdd/coding/ladder-ui/node_modules/.cache/ts-loader',
-              cacheIdentifier: '0de24be7'
+              cacheIdentifier: '50ff8dce'
             }
           },
           /* config.module.rule('ts').use('babel-loader') */
@@ -1588,7 +1212,7 @@
           },
           /* config.module.rule('ts').use('ts-loader') */
           {
-            loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/ts-loader/index.js',
+            loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader/index.js',
             options: {
               transpileOnly: true,
               appendTsSuffixTo: [
@@ -1608,7 +1232,7 @@
             loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/cache-loader/dist/cjs.js',
             options: {
               cacheDirectory: '/Users/hgwxxdd/coding/ladder-ui/node_modules/.cache/ts-loader',
-              cacheIdentifier: '0de24be7'
+              cacheIdentifier: '50ff8dce'
             }
           },
           /* config.module.rule('tsx').use('babel-loader') */
@@ -1617,7 +1241,7 @@
           },
           /* config.module.rule('tsx').use('ts-loader') */
           {
-            loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/ts-loader/index.js',
+            loader: '/Users/hgwxxdd/coding/ladder-ui/node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader/index.js',
             options: {
               transpileOnly: true,
               happyPackMode: false,
@@ -1625,6 +1249,17 @@
                 '\\.vue$'
               ]
             }
+          }
+        ]
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'vue-loader'
+          },
+          {
+            loader: '/Users/hgwxxdd/coding/ladder-ui/build/md-loader/index.js'
           }
         ]
       }
@@ -1704,7 +1339,7 @@
       {
         'process.env': {
           NODE_ENV: '"development"',
-          BASE_URL: '""'
+          BASE_URL: '"/"'
         }
       }
     ),
@@ -1742,7 +1377,7 @@
         ],
         cwd: '/Users/hgwxxdd/coding/ladder-ui',
         cache: true,
-        cacheLocation: '/Users/hgwxxdd/coding/ladder-ui/node_modules/.cache/eslint/67b5935c.json',
+        cacheLocation: '/Users/hgwxxdd/coding/ladder-ui/node_modules/.cache/eslint/2a0afc34.json',
         context: '/Users/hgwxxdd/coding/ladder-ui',
         threads: false,
         emitWarning: false,
@@ -1767,37 +1402,8 @@
           }
         }
       }
-    ),
-    {
-      options: {
-        template: 'auto',
-        templateContent: false,
-        templateParameters: function () { /* omitted long function */ },
-        filename: 'index.html',
-        publicPath: 'auto',
-        hash: false,
-        inject: 'body',
-        scriptLoading: 'blocking',
-        compile: true,
-        favicon: false,
-        minify: 'auto',
-        cache: true,
-        showErrors: true,
-        chunks: 'all',
-        excludeChunks: [],
-        chunksSortMode: 'auto',
-        meta: {
-          viewport: 'width=device-width, initial-scale=1'
-        },
-        base: false,
-        title: 'ladder-ui',
-        xhtml: false
-      },
-      childCompilerHash: undefined,
-      assetJson: undefined,
-      hash: undefined,
-      version: 4
-    }
+    )
   ],
-  entry: './docs/main.ts'
+  entry: './docs/main.ts',
+  devtool: 'source-map'
 }

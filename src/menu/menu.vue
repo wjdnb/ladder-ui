@@ -10,10 +10,14 @@
             v-for="(group, key) in item.groups"
             :key="key"
             :class="{
-              'sidebar-active': routePath === group.link,
+              'sidebar-active': routePath === group.path,
             }"
           >
-            <router-link :to="group.link">{{ group.name }}</router-link>
+            <router-link
+              :to="group.path"
+              @click="$emit('currentActive', group)"
+              >{{ group.zh }}</router-link
+            >
           </li>
         </ul>
       </li>
@@ -26,6 +30,7 @@ import { defineComponent, computed } from 'vue'
 import { useRoute } from 'vue-router'
 export default defineComponent({
   props: { options: { type: Array, default: () => [] } },
+  emits: ['currentActive'],
   setup() {
     const routePath = computed(() => useRoute().path)
 

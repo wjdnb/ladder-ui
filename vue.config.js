@@ -5,6 +5,7 @@ function resolve(dir) {
 
 module.exports = {
   configureWebpack: {
+    devtool: 'source-map',
     entry: './docs/main.ts',
     resolve: {
       alias: {
