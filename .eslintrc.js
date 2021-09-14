@@ -25,6 +25,7 @@ module.exports = {
     'no-trailing-spaces': 'error',
     'comma-style': ['error', 'last'],
     'comma-dangle': ['error', 'always-multiline'],
+
     quotes: [
       'error',
       'single',
@@ -36,6 +37,7 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'arrow-parens': ['error', 'as-needed'],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/member-delimiter-style': [
       'error',
@@ -53,6 +55,8 @@ module.exports = {
     // vue
     'vue/no-v-html': 'off',
     'vue/singleline-html-element-content-newline': 'off',
+    'vue/multiline-html-element-content-newline': 'off',
+    'vue/html-closing-bracket-newline': 'off',
     'vue/html-self-closing': [
       'error',
       {
@@ -75,5 +79,11 @@ module.exports = {
     ],
     'vue/require-default-prop': 'off',
     'vue/html-closing-bracket-spacing': 'error',
+    'no-unused-vars': [
+      'error',
+      // we are only using this rule to check for unused arguments since TS
+      // catches unused variables but not args.
+      { varsIgnorePattern: '.*', args: 'none' },
+    ],
   },
 }

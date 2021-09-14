@@ -34,6 +34,7 @@ const docList = [
     groups: [
       {
         zh: 'Ladder UI',
+        en: 'Introduction',
         path: '/docs/introduction',
       },
     ],
@@ -43,10 +44,26 @@ const docList = [
     groups: [
       {
         zh: '安装',
+        en: 'Install',
         path: '/docs/install',
       },
     ],
   },
 ]
 
-export { componentList, docList }
+const navList = [
+  {
+    name: '文档',
+    en: 'Introduction',
+    path: '/docs/introduction',
+    sign: 'docs',
+  },
+  {
+    name: '组件',
+    en: 'Button',
+    path: '/component/button',
+    sign: 'component',
+  },
+]
+
+export { componentList, docList, navList }

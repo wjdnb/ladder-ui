@@ -13,7 +13,9 @@
               'nav-active': routePath.includes(item.sign),
             }"
           >
-            <router-link :to="item.link">{{ item.name }}</router-link>
+            <router-link :to="item.path" @click="handleTitle(item)">{{
+              item.name
+            }}</router-link>
           </li>
         </ul>
       </nav>
@@ -30,37 +32,22 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, computed } from 'vue'
+<script lang="ts" setup>
+import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { useTitle } from '@vueuse/core'
+import { navList } from './components/link'
 
-export default defineComponent({
-  setup() {
-    const navList = ref([
-      {
-        name: '文档',
-        link: '/docs/introduction',
-        sign: 'docs',
-      },
-      {
-        name: '组件',
-        link: '/component/button',
-        sign: 'component',
-      },
-    ])
+const routePath = computed(() => useRoute().path)
 
-    const routePath = computed(() => useRoute().path)
+const title = useTitle()
 
-    const translate = () => {
-      alert('完善中✍️')
-    }
-    return {
-      navList,
-      routePath,
-      translate,
-    }
-  },
-})
+const handleTitle = (val: Record<string, unknown>): string =>
+  (title.value = `${val.en} | Ladder UI`)
+
+const translate = () => {
+  alert('完善中✍️')
+}
 </script>
 
 <style lang="scss" scoped>

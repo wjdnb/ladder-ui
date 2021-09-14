@@ -14,7 +14,7 @@
     <l-button type="danger">Danger</l-button>
     <l-button type="link">Link</l-button>
     <l-button type="primary" round>Primary</l-button>
-  <l-space>
+  </l-space>
 </template>
 ```
 
