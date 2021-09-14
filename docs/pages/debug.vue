@@ -1,44 +1,24 @@
 <template>
-  <h1>here</h1>
-  <l-button @click="add">go</l-button>
+  <div id="app">
+    <input v-model="title" type="text" />
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-export default defineComponent({
+<script>
+export default {
+  name: 'App',
   data() {
     return {
-      size: 'large',
-      num: 0,
+      title: document.title,
     }
   },
-  mounted() {
-    console.log('here')
-  },
-
-  methods: {
-    add() {
-      this.num++
-      console.log(this.num)
-    },
-    here() {
-      this.size = 'medium'
-      console.log('asdas')
-    },
-  },
-})
+  // watch: {
+  //   title: {
+  //     handler(val) {
+  //       document.title = val
+  //       console.log('here', val)
+  //     },
+  //   },
+  // },
+}
 </script>
-
-<style lang="scss" scoped>
-.test {
-  margin-top: 200px;
-  margin-left: 200px;
-}
-
-.grid {
-  padding: 8px;
-  border-radius: 20px;
-  background-color: #333;
-  margin: 0 20px;
-}
-</style>

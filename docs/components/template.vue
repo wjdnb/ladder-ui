@@ -1,7 +1,7 @@
 <template>
   <main>
     <aside>
-      <l-menu :options="sidebarOptions" @current-active="handleTitle"></l-menu>
+      <l-menu :options="sidebarOptions" @title="handleTitle"></l-menu>
     </aside>
 
     <section>
@@ -23,43 +23,35 @@
     </section>
   </main>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
 import { useTitle } from '@vueuse/core'
-import { defineComponent, computed, ref } from 'vue'
+import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import anchors from './anchor'
 import { docList, componentList } from './link'
-export default defineComponent({
-  setup() {
-    const route = computed(() => useRoute())
 
-    const sidebarOptions = computed(() => {
-      if (route.value.path.includes('component')) {
-        return componentList
-      } else if (route.value.path.includes('docs')) {
-        return docList
-      }
+const route = computed(() => useRoute())
 
-      return []
-    })
+const sidebarOptions = computed(() => {
+  if (route.value.path.includes('component')) {
+    console.log(componentList)
+    return componentList
+  } else if (route.value.path.includes('docs')) {
+    console.log(docList)
+    return docList
+  }
 
-    const handleTitle = (val: any) => {
-      const title = useTitle()
-      title.value = `${val.en} | Ladder UI`
-    }
+  return []
+})
 
-    let pageAnchor = computed(() => {
-      console.log(route.value.name)
-      const anchor = anchors.filter(item => item.name === route.value.name)
-      return anchor ? anchor[0]?.anchor : ''
-    })
+const title = useTitle()
 
-    return {
-      pageAnchor,
-      handleTitle,
-      sidebarOptions,
-    }
-  },
+const handleTitle = (val: string) =>
+  (title.value = `${val ?? 'L'}  | Ladder UI`)
+
+let pageAnchor = computed(() => {
+  const anchor = anchors.filter(item => item.name === route.value.name)
+  return anchor ? anchor[0]?.anchor : ''
 })
 </script>
 
