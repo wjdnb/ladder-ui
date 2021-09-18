@@ -18,6 +18,6 @@ export default defineComponent({
       className('l-layout', isVertical.value ? 'is-vertical' : ''),
     )
 
-    return () => <section class={classNames.value}>{slots.default?.()}</section>
+    return () => <div class={classNames.value}>{slots.default?.()}</div>
   },
 })

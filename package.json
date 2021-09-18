@@ -1,7 +1,7 @@
 {
   "name": "ladder-ui",
   "version": "0.1.1",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "clean:lib": "rimraf lib",
@@ -82,5 +82,11 @@
   "peerDependencies": {
     "vue": "3.2.0"
   },
+  "module": "lib/es/index.js",
+  "types": "lib/index.d.ts",
+  "main": "lib/es/index.js",
+  "files": [
+    "lib"
+  ],
   "license": "MIT"
 }

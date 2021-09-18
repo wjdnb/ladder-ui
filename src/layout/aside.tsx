@@ -20,9 +20,9 @@ export default defineComponent({
     })
 
     return () => (
-      <aside class="l-aside" style={styles.value}>
+      <div class="l-aside" style={styles.value}>
         {slots.default?.()}
-      </aside>
+      </div>
     )
   },
 })

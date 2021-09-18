@@ -1,0 +1,25 @@
+@import '@style/mixin';
+@import '@style/var';
+
+@include b(input) {
+  input {
+    padding: 6px 20px 6px 10px;
+    border: 1px solid $border-dark;
+    border-radius: 4px;
+    transition: all 0.3s;
+    margin: 0;
+    outline: none;
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+
+    &:hover {
+      border: 1px solid $primary-border;
+    }
+
+    &:focus {
+      border: 1px solid $primary-border;
+      box-shadow: 0 0 4px rgba($primary-border, 0.6);
+    }
+  }
+}
