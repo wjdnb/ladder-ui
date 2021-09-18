@@ -20,9 +20,9 @@ export default defineComponent({
     })
 
     return () => (
-      <header class="l-header" style={styles.value}>
+      <div class="l-header" style={styles.value}>
         {slots.default?.()}
-      </header>
+      </div>
     )
   },
 })

@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <input v-model="title" type="text" />
+    <div class="container">
+      <l-input placeholder="here" :type="type"></l-input>
+    </div>
   </div>
 </template>
 
@@ -10,15 +12,14 @@ export default {
   data() {
     return {
       title: document.title,
+      type: 'password',
     }
   },
-  // watch: {
-  //   title: {
-  //     handler(val) {
-  //       document.title = val
-  //       console.log('here', val)
-  //     },
-  //   },
-  // },
 }
 </script>
+
+<style lang="scss" scoped>
+.container {
+  padding: 100px;
+}
+</style>

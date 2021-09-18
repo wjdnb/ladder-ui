@@ -20,9 +20,9 @@ export default defineComponent({
     })
 
     return () => (
-      <footer class="l-footer" style={styles.value}>
+      <div class="l-footer" style={styles.value}>
         {slots.default?.()}
-      </footer>
+      </div>
     )
   },
 })

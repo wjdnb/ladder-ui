@@ -17,7 +17,7 @@
       </div>
     </section>
     <section>
-      <button @click="toDocument">get started ></button>
+      <button @click="toDocument">开始使用</button>
     </section>
   </div>
   <footer></footer>
@@ -102,7 +102,7 @@ section {
     button {
       position: relative;
       margin: 10px;
-      padding: 24px 20px;
+      padding: 12px 24px;
       overflow: hidden;
 
       font-size: 14px;
@@ -125,7 +125,7 @@ section {
 
         width: 24px;
         height: 24px;
-        clip-path: polygon(0 30%, 100% 100%, 0 100%);
+        clip-path: polygon(0 50%, 100% 100%, 0 100%);
         background-color: #fff;
       }
     }

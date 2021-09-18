@@ -13,7 +13,7 @@
               'sidebar-active': route.path === group.path,
             }"
           >
-            <a @click="handleRouteChange(group)"> {{ group.path }}</a>
+            <a @click="handleRouteChange(group)"> {{ group.zh }}</a>
           </li>
         </ul>
       </li>
