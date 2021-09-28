@@ -1,5 +1,5 @@
-import { defineComponent, inject, computed, CSSProperties } from 'vue'
-import className from '@/_util/className'
+import { defineComponent, inject, computed, CSSProperties, h } from 'vue'
+import className from '../../_util/className'
 
 export default defineComponent({
   name: 'LCol',

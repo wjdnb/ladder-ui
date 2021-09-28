@@ -1,4 +1,4 @@
-import { defineComponent, computed, CSSProperties } from 'vue'
+import { defineComponent, computed, CSSProperties, h } from 'vue'
 
 export default defineComponent({
   name: 'LAside',

@@ -1,4 +1,4 @@
-import { defineComponent, computed } from 'vue'
+import { defineComponent, computed, h } from 'vue'
 import type { ExtractPropTypes, CSSProperties, PropType } from 'vue'
 import className from '../_util/className'
 import { Size, AlignItems, JustifyContent } from '../_util/type'

@@ -1,4 +1,4 @@
-import { defineComponent, CSSProperties, computed } from 'vue'
+import { defineComponent, CSSProperties, computed, h } from 'vue'
 
 export default defineComponent({
   name: 'LFooter',
