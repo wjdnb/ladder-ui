@@ -6,6 +6,7 @@ docs/README.md
 lib
 output.js
 vue.config.js
+es
 
 # local env files
 .env.local

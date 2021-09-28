@@ -3,6 +3,7 @@
     <div class="nav-logo">
       <router-link to="/">Ladder UI</router-link>
     </div>
+
     <div class="nav-menu">
       <nav>
         <ul>

@@ -1,15 +1,11 @@
 {
   "name": "ladder-ui",
-  "version": "0.1.1",
-  "private": false,
+  "version": "0.1.2",
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "clean:lib": "rimraf lib",
-    "clean:doc": "rimraf dist",
-    "build:type": "node ./build/gen-types",
-    "build:component": "rollup --config ./build/rollup.config.bundle.js",
-    "build:css": "webpack --config ./build/webpack.config.css.js && rimraf lib/temp.css",
-    "build:all": "yarn clean:lib && yarn build:component && yarn build:css",
+    "clean": "rimraf lib && rimraf es",
+    "build:package": "yarn clean && node scripts/build",
+    "release": "npm run build:package && npm publish",
     "test": "jest",
     "build:doc": "yarn clean:doc && cross-env NODE_ENV=production webpack --config ./build/webpack.doc.js",
     "build": "vue-cli-service build",
@@ -17,7 +13,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^13.0.0",
     "@types/jest": "^26.0.23",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
@@ -31,8 +26,6 @@
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/test-utils": "^2.0.0-rc.8",
     "@vueuse/core": "^6.2.1",
-    "acorn": "^8.4.1",
-    "acorn-jsx": "^5.3.1",
     "babel-jest": "^26.1.0",
     "babel-plugin-import": "^1.13.3",
     "clipboard-copy": "^4.0.1",
@@ -44,8 +37,10 @@
     "eslint": "^7.20.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.2.0",
+    "execa": "^5.1.1",
     "file-loader": "^6.2.0",
     "fork-ts-checker-webpack-plugin": "^6.2.13",
+    "fs-extra": "^10.0.0",
     "gulp": "^4.0.2",
     "highlight.js": "^11.2.0",
     "html-webpack-plugin": "4",
@@ -57,13 +52,11 @@
     "mini-css-extract-plugin": "^2.1.0",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
-    "rollup": "^2.52.3",
+    "rollup": "^2.57.0",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-esbuild": "^4.5.0",
     "rollup-plugin-import-css": "^3.0.0",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.30.0",
-    "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.34.1",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.0.0",
@@ -82,11 +75,10 @@
   "peerDependencies": {
     "vue": "3.2.0"
   },
-  "module": "lib/es/index.js",
-  "types": "lib/index.d.ts",
-  "main": "lib/es/index.js",
   "files": [
-    "lib"
+    "lib",
+    "es"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module"
 }

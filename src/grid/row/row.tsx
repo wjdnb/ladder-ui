@@ -1,4 +1,4 @@
-import { defineComponent, provide, computed, PropType } from 'vue'
+import { defineComponent, provide, computed, PropType, h } from 'vue'
 import { JustifyContent, AlignItems } from '@/_util/type'
 import { isArray, isNumber } from '@/_util/assertion'
 import className from '@/_util/className'

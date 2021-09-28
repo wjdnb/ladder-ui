@@ -7,3 +7,9 @@ export default function install(app: App) {
     app.component(item, components[item])
   })
 }
+
+
+
+
+
+

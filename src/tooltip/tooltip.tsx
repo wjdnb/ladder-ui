@@ -1,4 +1,4 @@
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, h } from 'vue'
 
 export default defineComponent({
   name: 'LTooltip',
