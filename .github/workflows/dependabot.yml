@@ -1,7 +1,8 @@
-name: dependabot
-
 version: 2
 updates:
+
+
+
   # Enable version updates for npm
   - package-ecosystem: "npm"
     # Look for `package.json` and `lock` files in the `root` directory
@@ -9,3 +10,8 @@ updates:
     # Check the npm registry for updates every day (weekdays)
     schedule:
       interval: "daily"
+
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'daily'
