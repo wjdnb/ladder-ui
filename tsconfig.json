@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "./lib",
     "paths": {
       "@/*": ["src/*"],
       "~/*": ["docs/*"]
@@ -30,9 +29,12 @@
     "lib": ["ESNext", "DOM", "dom.iterable", "scripthost"]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
+    "es/**/*.ts",
+    "es/**/*.tsx"
+    // "src/**/*.ts",
+    // "src/**/*.tsx",
+    // "src/**/*.vue",
+
     // "docs/**/*.ts",
     // "docs/**/*.tsx",
     // "docs/**/*.vue"

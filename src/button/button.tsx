@@ -1,8 +1,8 @@
 import { defineComponent, computed, h } from 'vue'
 import type { ExtractPropTypes, PropType } from 'vue'
-import className from '@/_util/className'
-import styleName from '@/_util/styleName'
-import { Size, Type } from '@/_util/type'
+import className from '../_util/className'
+import styleName from '../_util/styleName'
+import { Size, Type } from '../_util/type'
 
 const buttonProps = {
   type: {

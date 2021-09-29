@@ -1,5 +1,5 @@
 import { defineComponent, computed, h } from 'vue'
-import className from '@/_util/className'
+import className from '../_util/className'
 export default defineComponent({
   props: {
     dashed: {
