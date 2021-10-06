@@ -1,17 +1,20 @@
 {
   "name": "ladder-ui",
-  "version": "0.1.2",
+  "version": "0.1.6",
+  "description": "A Vue3 UI Library",
+  "main": "lib/index.js",
+  "module": "es/index.js",
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "clean": "rimraf lib && rimraf es",
     "build:package": "yarn clean && node scripts/build",
-    "release": "npm run build:package && npm publish",
+    "release": "yarn build:package && yarn publish",
     "test": "jest",
     "build:doc": "yarn clean:doc && cross-env NODE_ENV=production webpack --config ./build/webpack.doc.js",
     "build": "vue-cli-service build",
-    "inspect": "vue-cli-service inspect > output.js",
-    "tsc": "tsc -b"
+    "inspect": "vue-cli-service inspect > output.js"
   },
+  "type": "module",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^26.0.23",
@@ -33,7 +36,6 @@
     "core-js": "^3.8.3",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.6",
-    "dart-sass": "^1.25.0",
     "esbuild": "^0.12.11",
     "eslint": "^7.20.0",
     "eslint-plugin-prettier": "^3.3.1",
@@ -80,6 +82,17 @@
     "lib",
     "es"
   ],
-  "license": "MIT",
-  "type": "module"
+  "keywords": [
+    "vue",
+    "vue3",
+    "typescript",
+    "component",
+    "ui-library"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hgwxxdd/ladder-ui"
+  },
+  "author": "Hgwxxdd",
+  "license": "MIT"
 }
