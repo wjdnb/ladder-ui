@@ -2,8 +2,24 @@ import execa from 'execa'
 import { copy, remove } from 'fs-extra'
 import { readdirSync } from 'fs'
 import { join } from 'path'
-import { ES_DIR, LIB_DIR, SRC_DIR, ESM_TSCONFIG, CJS_TSCONFIG, ESM_TSCONFIG_INFO, CJS_TSCONFIG_INFO } from '../ladder.config.js'
-import { isDir, isDemoDir, isTestDir, isTsFile, isTsxFile, isScssFile, isVueFile } from './utils.js'
+import {
+  ES_DIR,
+  LIB_DIR,
+  SRC_DIR,
+  ESM_TSCONFIG,
+  CJS_TSCONFIG,
+  ESM_TSCONFIG_INFO,
+  CJS_TSCONFIG_INFO,
+} from '../ladder.config.js'
+import {
+  isDir,
+  isDemoDir,
+  isTestDir,
+  isTsFile,
+  isTsxFile,
+  isScssFile,
+  isVueFile,
+} from './utils.js'
 
 const steps = [
   {
@@ -24,8 +40,8 @@ const steps = [
   },
   {
     name: 'Remove CommonJS Useless Output',
-    use: handleCJSOutput
-  }
+    use: handleCJSOutput,
+  },
 ]
 
 async function BuildScss() {
@@ -59,11 +75,11 @@ async function copySourceCode() {
 }
 
 async function buildTypescript() {
-  await execa('tsc', ['-b','--force', ESM_TSCONFIG]).then(() => {
+  await execa('tsc', ['-b', '--force', ESM_TSCONFIG]).then(() => {
     execa('rimraf', [ESM_TSCONFIG_INFO])
   })
 
-  await execa('tsc', ['-b','--force', CJS_TSCONFIG]).then(() => {
+  await execa('tsc', ['-b', '--force', CJS_TSCONFIG]).then(() => {
     execa('rimraf', [CJS_TSCONFIG_INFO])
   })
 }
@@ -81,7 +97,7 @@ async function removeUselessFile(dir) {
       if (isDir(filePath)) {
         return removeUselessFile(filePath)
       }
-      
+
       if (isTsxFile(filePath)) {
         return remove(filePath)
       }
@@ -90,15 +106,15 @@ async function removeUselessFile(dir) {
         return remove(filePath)
       }
 
-      if(isScssFile(filePath)) {
+      if (isScssFile(filePath)) {
         return remove(filePath)
       }
 
-      if(isVueFile(filePath)) {
+      if (isVueFile(filePath)) {
         return remove(filePath)
       }
 
-      return 
+      return
     }),
   )
 }

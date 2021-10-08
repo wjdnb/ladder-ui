@@ -3,7 +3,10 @@ import { join } from 'path'
 import { mkdirSync, existsSync, writeFileSync } from 'fs'
 
 export function toUpperCase(word) {
-  return word.split("").map((item, index) => index === 0 ? item.toLocaleUpperCase() : item).join("")
+  return word
+    .split('')
+    .map((item, index) => (index === 0 ? item.toLocaleUpperCase() : item))
+    .join('')
 }
 
 export function createComponent(dir) {
@@ -36,13 +39,13 @@ export default defineComponent({
   }
 })`
 
-const indexFileTemplate = `
+  const indexFileTemplate = `
 import L${toUpperCase(dir)} from './${dir}'
 export type { ${dir}Props } from './${dir}Props'
 export { L${toUpperCase(dir)} }
 `
 
-  if (existsSync(componentPath)) return;
+  if (existsSync(componentPath)) return
 
   mkdirSync(componentPath)
   mkdirSync(componentStylePath)
@@ -55,10 +58,6 @@ export { L${toUpperCase(dir)} }
 
   // TODO
   // Add to componentPath.ts & index.scss
-  
 }
-
-
-
 
 createComponent('test')
