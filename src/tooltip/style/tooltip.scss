@@ -1,4 +1,4 @@
-@import '../../_style/mixin.scss';
+@import '@style/mixin.scss';
 
 @include b(tooltip) {
   position: relative;

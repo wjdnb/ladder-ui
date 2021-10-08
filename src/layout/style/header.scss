@@ -1,4 +1,4 @@
-@import '../../_style/mixin';
+@import '@style/mixin';
 
 @include b(header) {
   flex: 1 1 auto;

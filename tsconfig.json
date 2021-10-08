@@ -4,7 +4,7 @@
       "@/*": ["src/*"],
       "~/*": ["docs/*"]
     },
-    "target": "ESNext",
+    "target": "ES6",
     "module": "ES6",
     "moduleResolution": "node",
     "strict": true,
@@ -29,12 +29,15 @@
     "lib": ["ESNext", "DOM", "dom.iterable", "scripthost"]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "docs/**/*.ts",
-    "docs/**/*.tsx",
-    "docs/**/*.vue"
+    "es/**/*.ts",
+    "es/**/*.tsx"
+    // "src/**/*.ts",
+    // "src/**/*.tsx",
+    // "src/**/*.vue",
+
+    // "docs/**/*.ts",
+    // "docs/**/*.tsx",
+    // "docs/**/*.vue"
   ],
   "exclude": ["node_modules"]
 }

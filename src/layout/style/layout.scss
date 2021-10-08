@@ -1,4 +1,4 @@
-@import '../../_style/mixin';
+@import '@style/mixin';
 
 @include b(layout) {
   display: flex;
