@@ -30,7 +30,7 @@
     "babel-jest": "^26.1.0",
     "babel-plugin-import": "^1.13.3",
     "clipboard-copy": "^4.0.1",
-    "core-js": "^3.8.3",
+    "core-js": "^3.18.2",
     "cross-env": "^7.0.3",
     "css-loader": "^6.3.0",
     "dart-sass": "^1.25.0",
