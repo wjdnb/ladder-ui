@@ -1,9 +1,10 @@
 import { sep } from 'path'
-// import { lstatSync } from 'fs-extra';
 import { lstatSync } from 'fs';
 
-export const TS_REGEXP= /\.ts$/
+export const TS_REGEXP= /[^d]\.ts$/
 export const TSX_REGEXP = /\.tsx$/
+export const SCSS_REGEXP = /\.scss$/
+export const VUE_REGEXP = /\.vue$/
 export const DEMO_REGEXP = new RegExp('\\' + sep + 'demo$');
 export const TEST_REGEXP = new RegExp('\\' + sep + 'test$');
 
@@ -25,4 +26,12 @@ export function isTsxFile(dir) {
 
 export function isTsFile(dir) {
   return TS_REGEXP.test(dir)
+}
+
+export function isScssFile(dir) {
+  return SCSS_REGEXP.test(dir)
+}
+
+export function isVueFile(dir) {
+  return VUE_REGEXP.test(dir)
 }

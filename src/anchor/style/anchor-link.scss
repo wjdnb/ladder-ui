@@ -1,5 +1,5 @@
-@import '@style/mixin.scss';
-@import '@style/var.scss';
+@import '../../_style/mixin.scss';
+@import '../../_style/var.scss';
 
 @include b(anchor-link) {
   border-left: 2px solid #eee;
