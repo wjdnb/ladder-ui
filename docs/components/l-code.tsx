@@ -1,4 +1,4 @@
-import { defineComponent, computed } from 'vue'
+import { defineComponent, computed, h } from 'vue'
 import hljs from 'highlight.js/lib/common'
 import className from '@/_util/className'
 export default defineComponent({

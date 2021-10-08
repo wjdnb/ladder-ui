@@ -1,5 +1,5 @@
-@import '@style/var.scss';
-@import '@style/mixin.scss';
+@import '../../_style/var.scss';
+@import '../../_style/mixin.scss';
 
 @include b(button) {
   color: rgba(0, 0, 0, 0.65);

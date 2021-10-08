@@ -1,5 +1,5 @@
-@import '@style/mixin';
-@import '@style/var';
+@import '../../_style/mixin';
+@import '../../_style/var';
 
 @include b(input) {
   input {
