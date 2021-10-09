@@ -37,6 +37,7 @@
     "core-js": "^3.8.3",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.6",
+    "cz-conventional-changelog": "3.3.0",
     "esbuild": "^0.12.11",
     "eslint": "^7.20.0",
     "eslint-plugin-prettier": "^3.3.1",
@@ -96,5 +97,10 @@
     "url": "https://github.com/Hgwxxdd/ladder-ui"
   },
   "author": "Hgwxxdd",
-  "license": "MIT"
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
 }
