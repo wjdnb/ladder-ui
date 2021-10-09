@@ -1,8 +1,12 @@
-import execa from 'execa'
-import { copy, remove } from 'fs-extra'
-import { readdirSync } from 'fs'
-import { join } from 'path'
-import {
+const execa = require('execa')
+const { copy, remove } = require('fs-extra')
+const { readdirSync } = require('fs')
+const { join } = require('path')
+const ora = require('ora')
+const consola = require('consola')
+const chalk = require('chalk')
+
+const {
   ES_DIR,
   LIB_DIR,
   SRC_DIR,
@@ -10,8 +14,8 @@ import {
   CJS_TSCONFIG,
   ESM_TSCONFIG_INFO,
   CJS_TSCONFIG_INFO,
-} from '../ladder.config.js'
-import {
+} = require('../ladder.config.js')
+const {
   isDir,
   isDemoDir,
   isTestDir,
@@ -19,9 +23,13 @@ import {
   isTsxFile,
   isScssFile,
   isVueFile,
-} from './utils.js'
+} = require('./utils.js')
 
 const steps = [
+  {
+    name: 'Run Tests',
+    use: runTest,
+  },
   {
     name: 'Copy Source Code',
     use: copySourceCode,
@@ -49,6 +57,10 @@ async function BuildScss() {
   await execa('npx', ['sass', LIB_DIR, '--no-source-map'])
 }
 
+async function runTest() {
+  await execa('yarn', ['test'])
+}
+
 async function handleESMOutput() {
   await removeUselessFile(ES_DIR)
 }
@@ -59,11 +71,15 @@ async function handleCJSOutput() {
 
 async function runBuildSteps() {
   for (let i = 0; i < steps.length; i++) {
-    const { use } = steps[i]
+    const { use, name } = steps[i]
+    const spinner = ora(name).start()
     try {
       await use()
+      spinner.stop()
+      console.log(`${chalk.bgGreen.black(' DONE ')} ${name}\n`)
     } catch (err) {
-      console.log(err)
+      spinner.stop()
+      consola.error(new Error(err))
       throw err
     }
   }
@@ -75,11 +91,11 @@ async function copySourceCode() {
 }
 
 async function buildTypescript() {
-  await execa('tsc', ['-b', '--force', ESM_TSCONFIG]).then(() => {
+  await execa('npx', ['tsc', '-b', '--force', ESM_TSCONFIG]).then(() => {
     execa('rimraf', [ESM_TSCONFIG_INFO])
   })
 
-  await execa('tsc', ['-b', '--force', CJS_TSCONFIG]).then(() => {
+  await execa('npx', ['tsc', '-b', '--force', CJS_TSCONFIG]).then(() => {
     execa('rimraf', [CJS_TSCONFIG_INFO])
   })
 }
