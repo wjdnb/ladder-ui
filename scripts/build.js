@@ -72,7 +72,9 @@ async function handleCJSOutput() {
 async function runBuildSteps() {
   for (let i = 0; i < steps.length; i++) {
     const { use, name } = steps[i]
-    const spinner = ora(name).start()
+    const spinner = ora().start()
+    console.log(`${chalk.bgYellow.black('')} ${name}\n`)
+    const spinner = ora().start()
     try {
       await use()
       spinner.stop()
