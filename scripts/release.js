@@ -2,16 +2,11 @@ const args = require('minimist')(process.argv.slice(2))
 const { prompt } = require('enquirer')
 const currentVersion = require('../package.json').version
 const semver = require('semver')
-// const chalk = require('chalk')
-// const fs = require('fs')
-// const path = require('path')
-// const ora = require('ora')
+const execa = require('execa')
 
 const preId =
   args.preid ||
   (semver.prerelease(currentVersion) && semver.prerelease(currentVersion)[0])
-
-const skipTests = args.skipTests
 
 const versionIncrements = [
   'patch',
@@ -22,6 +17,8 @@ const versionIncrements = [
 
 const inc = i => semver.inc(currentVersion, i, preId)
 
+let targetVersion = null
+
 const steps = [
   {
     name: 'Enter The Version',
@@ -31,35 +28,38 @@ const steps = [
     name: 'Generate Changelog',
     use: generateChangelog,
   },
+  {
+    name: 'Push To Remote',
+    use: pushToGithub,
+  },
+  {
+    name: 'Publish To Npm',
+  },
 ]
 
 async function enterVersion() {
-  let targetVersion = args._[0]
+  const { release } = await prompt({
+    type: 'select',
+    name: 'release',
+    message: 'Select release type',
+    choices: versionIncrements.map(i => `${i} (${inc(i)})`).concat(['custom']),
+  })
 
-  if (!targetVersion) {
-    const { release } = await prompt({
-      type: 'select',
-      name: 'release',
-      message: 'Select release type',
-      choices: versionIncrements
-        .map(i => `${i} (${inc(i)})`)
-        .concat(['custom']),
-    })
+  if (release === 'custom') {
+    targetVersion = (
+      await prompt({
+        type: 'input',
+        name: 'version',
+        message: 'Input custom version',
+        initial: currentVersion,
+      })
+    ).version
 
-    if (release === 'custom') {
-      targetVersion = (
-        await prompt({
-          type: 'input',
-          name: 'version',
-          message: 'Input custom version',
-          initial: currentVersion,
-        })
-      ).version
-
-      if (!semver.valid(targetVersion)) {
-        throw new Error(`invalid target version: ${targetVersion}`)
-      }
+    if (!semver.valid(targetVersion)) {
+      throw new Error(`invalid target version: ${targetVersion}`)
     }
+  } else {
+    targetVersion = release.match(/\((.*)\)/)[1]
   }
 
   const { yes } = await prompt({
@@ -87,8 +87,16 @@ async function runReleaseSteps() {
 }
 
 async function generateChangelog() {
-  await run(`yarn`, ['changelog'])
+  await execa(`yarn`, ['changelog'])
 }
+
+async function pushToGithub() {
+  await execa('git', ['tag', `v${targetVersion}`])
+  await execa('git', ['push', 'origin', `refs/tags/v${targetVersion}`])
+  await execa('git', ['push'])
+}
+
+async function publishToNpm() {}
 
 ;(async function release() {
   await runReleaseSteps()

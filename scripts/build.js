@@ -25,6 +25,8 @@ const {
   isVueFile,
 } = require('./utils.js')
 
+const greenText = text => chalk.black.bgGreen(` ${text} `)
+
 const steps = [
   {
     name: 'Run Tests',
@@ -72,13 +74,13 @@ async function handleCJSOutput() {
 async function runBuildSteps() {
   for (let i = 0; i < steps.length; i++) {
     const { use, name } = steps[i]
-    const spinner = ora().start()
-    console.log(`${chalk.bgYellow.black('')} ${name}\n`)
-    const spinner = ora().start()
+    const spinner = ora(name).start()
+    const done = `${greenText('DONE')} ${name}`
+
     try {
       await use()
       spinner.stop()
-      console.log(`${chalk.bgGreen.black(' DONE ')} ${name}\n`)
+      console.log(done)
     } catch (err) {
       spinner.stop()
       consola.error(new Error(err))
@@ -138,5 +140,8 @@ async function removeUselessFile(dir) {
 }
 
 ;(async function build() {
-  await runBuildSteps()
+  await runBuildSteps().then(() => {
+    const success = `${greenText('DONE')} Build complete! \n`
+    console.log(success)
+  })
 })()
