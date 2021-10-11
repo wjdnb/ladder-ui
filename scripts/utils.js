@@ -1,5 +1,5 @@
-const { sep } = require('path') 
-const { lstatSync } = require('fs') 
+const { sep } = require('path')
+const { lstatSync } = require('fs')
 
 const TS_REGEXP = /[^d]\.ts$/
 const TSX_REGEXP = /\.tsx$/

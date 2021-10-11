@@ -14,6 +14,7 @@ const {
   CJS_TSCONFIG,
   ESM_TSCONFIG_INFO,
   CJS_TSCONFIG_INFO,
+  TSCONFIG_INFO,
 } = require('../ladder.config.js')
 const {
   isDir,
@@ -24,8 +25,6 @@ const {
   isScssFile,
   isVueFile,
 } = require('./utils.js')
-
-const greenText = text => chalk.black.bgGreen(` ${text} `)
 
 const steps = [
   {
@@ -53,6 +52,8 @@ const steps = [
     use: handleCJSOutput,
   },
 ]
+
+const greenText = text => chalk.black.bgGreen(` ${text} `)
 
 async function BuildScss() {
   await execa('npx', ['sass', ES_DIR, '--no-source-map'])
@@ -102,6 +103,8 @@ async function buildTypescript() {
   await execa('npx', ['tsc', '-b', '--force', CJS_TSCONFIG]).then(() => {
     execa('rimraf', [CJS_TSCONFIG_INFO])
   })
+
+  await execa('rimraf', [TSCONFIG_INFO])
 }
 
 async function removeUselessFile(dir) {

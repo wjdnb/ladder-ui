@@ -21,8 +21,8 @@ let targetVersion = null
 
 const steps = [
   {
-    name: 'Enter The Version',
-    use: enterVersion,
+    name: 'Determine the release version',
+    use: determineReleaseVersion,
   },
   {
     name: 'Generate Changelog',
@@ -34,10 +34,11 @@ const steps = [
   },
   {
     name: 'Publish To Npm',
+    use: publishToNpm,
   },
 ]
 
-async function enterVersion() {
+async function determineReleaseVersion() {
   const { release } = await prompt({
     type: 'select',
     name: 'release',
@@ -75,9 +76,8 @@ async function enterVersion() {
 
 async function runReleaseSteps() {
   for (let i = 0; i < steps.length; i++) {
-    const { use, name } = steps[i]
+    const { use } = steps[i]
     try {
-      // const spinner = ora(text).start()
       await use()
     } catch (err) {
       console.log(err)
@@ -96,7 +96,22 @@ async function pushToGithub() {
   await execa('git', ['push'])
 }
 
-async function publishToNpm() {}
+async function publishToNpm() {
+  await execa('yarn', [
+    'publish',
+    '--new-version',
+    version,
+    [
+      'publish',
+      '--new-version',
+      version,
+      '--tag',
+      targetVersion,
+      '--access',
+      'public',
+    ],
+  ])
+}
 
 ;(async function release() {
   await runReleaseSteps()
