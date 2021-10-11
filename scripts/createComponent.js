@@ -57,7 +57,7 @@ export { L${toUpperCase(dir)} }
   writeFileSync(indexFilePath, indexFileTemplate.trim())
 
   // TODO
-  // Add to componentPath.ts & index.scss
+  // Add the to component.ts & index.scss
 }
 
 createComponent('test')
