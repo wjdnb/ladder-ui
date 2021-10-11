@@ -104,8 +104,7 @@ async function generateChangelog() {
 
 async function pushToGithub() {
   await execa('git', ['add', '--all'])
-  await execa('git', ['commit', '-m', `release: v${targetVersion}`])
-
+  await execa('git', ['commit', '-m', `chore(release): v${targetVersion}`])
   await execa('git', ['tag', `v${targetVersion}`])
   await execa('git', ['push', 'origin', `refs/tags/v${targetVersion}`])
   await execa('git', ['push'])
