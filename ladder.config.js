@@ -8,7 +8,8 @@ const TSCONFIG = join(ROOT, 'tsconfig.json')
 const ESM_TSCONFIG = join(ROOT, 'tsconfig.cjs.json')
 const TSCONFIG_INFO = join(ROOT, 'tsconfig.tsbuildinfo')
 const CJS_TSCONFIG = join(ROOT, 'tsconfig.esm.json')
-const ESM_TSCONFIG_INFO = join(ROOT, 'tsconfig.cjs.tsbuildinfo')
+const CJS_TSCONFIG_INFO = join(ROOT, 'tsconfig.cjs.tsbuildinfo')
+const ESM_TSCONFIG_INFO = join(ROOT, 'tsconfig.esm.tsbuildinfo')
 
 module.exports = {
   ROOT,
