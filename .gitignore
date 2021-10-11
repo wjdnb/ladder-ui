@@ -8,9 +8,6 @@ output.js
 vue.config.js
 es
 
-src/menu
-src/message
-
 
 # local env files
 .env.local
