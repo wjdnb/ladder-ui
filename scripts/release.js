@@ -127,7 +127,7 @@ async function publishToNpm() {
     'public',
   ])
   spinner.stop()
-  const success = `${greenText('DONE')} Build complete! \n`
+  const success = `${greenText('DONE')} Release Complete! \n`
   console.log(success)
 }
 
