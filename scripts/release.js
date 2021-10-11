@@ -1,10 +1,11 @@
 const args = require('minimist')(process.argv.slice(2))
 const { prompt } = require('enquirer')
-const pkgPath = require('../package.json')
 const currentVersion = require('../package.json').version
 const semver = require('semver')
 const execa = require('execa')
 const fs = require('fs')
+const { ROOT } = require('../ladder.config')
+const { join } = require('path')
 
 const preId =
   args.preid ||
@@ -77,7 +78,8 @@ async function determineReleaseVersion() {
 }
 
 async function updateVersion(targetVersion) {
-  const pkgFile = JSON.parse(fs.readFileSync(packagePath, 'utf-8'))
+  const pkgPath = join(ROOT, 'package.json')
+  const pkgFile = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'))
   pkgFile.version = targetVersion
   fs.writeFileSync(pkgPath, JSON.stringify(pkgFile, null, 2) + '\n')
 }
