@@ -6,6 +6,10 @@ const execa = require('execa')
 const fs = require('fs')
 const { ROOT } = require('../ladder.config')
 const { join } = require('path')
+const ora = require('ora')
+const chalk = require('chalk')
+
+const greenText = text => chalk.black.bgGreen(` ${text} `)
 
 const preId =
   args.preid ||
@@ -111,6 +115,8 @@ async function pushToGithub() {
 }
 
 async function publishToNpm() {
+  const spinner = ora('publishing to npm').start()
+
   await execa('yarn', [
     'publish',
     '--new-version',
@@ -120,6 +126,9 @@ async function publishToNpm() {
     '--access',
     'public',
   ])
+  spinner.stop()
+  const success = `${greenText('DONE')} Build complete! \n`
+  console.log(success)
 }
 
 ;(async function release() {
