@@ -1,3 +1,12 @@
+## [0.1.12](https://github.com/Hgwxxdd/ladder-ui/compare/v0.1.12-beta.1...v0.1.12) (2021-10-11)
+
+
+### Features
+
+* **build:** build test ([2cfdd9f](https://github.com/Hgwxxdd/ladder-ui/commit/2cfdd9f840e61bb6527b2c85355497ed83d929da))
+
+
+
 ## [0.1.12-beta.1](https://github.com/Hgwxxdd/ladder-ui/compare/v0.1.12-beta.0...v0.1.12-beta.1) (2021-10-11)
 
 
