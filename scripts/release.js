@@ -4,6 +4,7 @@ const pkgPath = require('../package.json')
 const currentVersion = require('../package.json').version
 const semver = require('semver')
 const execa = require('execa')
+const fs = require('fs')
 
 const preId =
   args.preid ||
