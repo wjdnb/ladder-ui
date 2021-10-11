@@ -1,9 +1,9 @@
-import { existsSync } from 'fs'
-import { SRC_DIR } from '../ladder.config.js'
-import { join } from 'path'
-import { remove } from 'fs-extra'
+const { existsSync } = require('fs')
+const { SRC_DIR } = require('../ladder.config.js')
+const { join } = require('path')
+const { remove } = require('fs-extra')
 
-export function removeComponent(dir) {
+function removeComponent(dir) {
   const componentPath = join(SRC_DIR, dir)
 
   if (existsSync(componentPath)) {
@@ -11,7 +11,7 @@ export function removeComponent(dir) {
   }
 
   // TODO
-  // Reove from componentPath.ts & index.scss
+  // Reove from component.ts & index.scss
 }
 
 removeComponent('test')
