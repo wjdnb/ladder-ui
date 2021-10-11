@@ -1,15 +1,15 @@
-import { SRC_DIR } from '../ladder.config.js'
-import { join } from 'path'
-import { mkdirSync, existsSync, writeFileSync } from 'fs'
+const { SRC_DIR } = require('../ladder.config.js')
+const { join } = require('path')
+const { mkdirSync, existsSync, writeFileSync } = require('fs')
 
-export function toUpperCase(word) {
+function toUpperCase(word) {
   return word
     .split('')
     .map((item, index) => (index === 0 ? item.toLocaleUpperCase() : item))
     .join('')
 }
 
-export function createComponent(dir) {
+function createComponent(dir) {
   const componentPath = join(SRC_DIR, dir)
   const componentStylePath = join(componentPath, 'style')
   const componentDemoPath = join(componentPath, 'demo')
