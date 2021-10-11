@@ -1,3 +1,17 @@
+## [0.1.12-beta.1](https://github.com/Hgwxxdd/ladder-ui/compare/v0.1.12-beta.0...v0.1.12-beta.1) (2021-10-11)
+
+
+### Bug Fixes
+
+* **action:** yaml file ([8ef7e06](https://github.com/Hgwxxdd/ladder-ui/commit/8ef7e063335e50f484a6b84dd895f80c9a854acc))
+
+
+### Features
+
+* **release:** change action ([bc034e4](https://github.com/Hgwxxdd/ladder-ui/commit/bc034e4c54e9fe7e659625748a776ca920f25834))
+
+
+
 ## [0.1.12-beta.0](https://github.com/Hgwxxdd/ladder-ui/compare/v0.1.11...v0.1.12-beta.0) (2021-10-11)
 
 
