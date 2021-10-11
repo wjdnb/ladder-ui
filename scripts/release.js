@@ -100,15 +100,10 @@ async function publishToNpm() {
     'publish',
     '--new-version',
     targetVersion,
-    [
-      'publish',
-      '--new-version',
-      version,
-      '--tag',
-      targetVersion,
-      '--access',
-      'public',
-    ],
+    '--tag',
+    targetVersion,
+    '--access',
+    'public',
   ])
 }
 

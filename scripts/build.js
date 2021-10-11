@@ -96,13 +96,11 @@ async function copySourceCode() {
 }
 
 async function buildTypescript() {
-  await execa('npx', ['tsc', '-b', '--force', ESM_TSCONFIG]).then(() => {
-    execa('rimraf', [ESM_TSCONFIG_INFO])
-  })
+  await execa('npx', ['tsc', '-b', '--force', ESM_TSCONFIG])
+  await execa('rimraf', [ESM_TSCONFIG_INFO])
 
-  await execa('npx', ['tsc', '-b', '--force', CJS_TSCONFIG]).then(() => {
-    execa('rimraf', [CJS_TSCONFIG_INFO])
-  })
+  await execa('npx', ['tsc', '-b', '--force', CJS_TSCONFIG])
+  await execa('rimraf', [CJS_TSCONFIG_INFO])
 
   await execa('rimraf', [TSCONFIG_INFO])
 }

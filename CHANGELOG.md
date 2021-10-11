@@ -1,3 +1,18 @@
+## [0.1.7-alpha.8](https://github.com/Hgwxxdd/ladder-ui/compare/v0.1.7-alpha.9...v0.1.7-alpha.8) (2021-10-11)
+
+
+### Bug Fixes
+
+* **release:** fix publish to npm bug ([0d35bdd](https://github.com/Hgwxxdd/ladder-ui/commit/0d35bdd336ca9e9a639d2d48e771c80f9dfd95d4))
+
+
+### Features
+
+* **git:** change ignore ([c210ca8](https://github.com/Hgwxxdd/ladder-ui/commit/c210ca89f6b6686678d2cccbeadbe8d45199999a))
+* **tooltip:** remove tooltip.vue ([a8883cb](https://github.com/Hgwxxdd/ladder-ui/commit/a8883cb1c21ca03f7dd733ed8b24a05501c9e2aa))
+
+
+
 ## [0.1.7-alpha.2](https://github.com/Hgwxxdd/ladder-ui/compare/v0.1.6-alpha.3...v0.1.7-alpha.2) (2021-10-10)
 
 
