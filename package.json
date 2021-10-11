@@ -9,7 +9,6 @@
     "clean": "rimraf lib && rimraf es",
     "build:package": "yarn test && yarn clean && node scripts/build.js",
     "release": "node scripts/release.js",
-    "release:test": "yarn release --dry-run",
     "test": "jest",
     "build:doc": "yarn clean:doc && cross-env NODE_ENV=production webpack --config ./build/webpack.doc.js",
     "build": "vue-cli-service build",
