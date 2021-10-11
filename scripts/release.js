@@ -99,7 +99,7 @@ async function publishToNpm() {
   await execa('yarn', [
     'publish',
     '--new-version',
-    version,
+    targetVersion,
     [
       'publish',
       '--new-version',
