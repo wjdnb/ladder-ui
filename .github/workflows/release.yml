@@ -18,7 +18,7 @@ jobs:
           node-version: '12'
 
       - name: Automatic Releases
-      - uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1
         with:
           bodyFile: 'CHANGELOG.md'
           token: ${{ secrets.GITHUB_TOKEN }}
