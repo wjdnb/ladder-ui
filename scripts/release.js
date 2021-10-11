@@ -75,6 +75,8 @@ async function determineReleaseVersion() {
   if (!yes) {
     return
   }
+
+  await updateVersion(targetVersion)
 }
 
 async function updateVersion(targetVersion) {
@@ -101,8 +103,6 @@ async function generateChangelog() {
 }
 
 async function pushToGithub() {
-  await updateVersion(targetVersion)
-
   await execa('git', ['add', '--all'])
   await execa('git', ['commit', '-m', `release: v${targetVersion}`])
 
