@@ -1,5 +1,6 @@
 const args = require('minimist')(process.argv.slice(2))
 const { prompt } = require('enquirer')
+const pkgPath = require('../package.json')
 const currentVersion = require('../package.json').version
 const semver = require('semver')
 const execa = require('execa')
@@ -74,6 +75,12 @@ async function determineReleaseVersion() {
   }
 }
 
+async function updateVersion(targetVersion) {
+  const pkgFile = JSON.parse(fs.readFileSync(packagePath, 'utf-8'))
+  pkgFile.version = targetVersion
+  fs.writeFileSync(pkgPath, JSON.stringify(pkgFile, null, 2) + '\n')
+}
+
 async function runReleaseSteps() {
   for (let i = 0; i < steps.length; i++) {
     const { use } = steps[i]
@@ -91,8 +98,14 @@ async function generateChangelog() {
 }
 
 async function pushToGithub() {
+  await updateVersion(targetVersion)
+
+  await execa('git', ['add', '--all'])
+  await execa('git', ['commit', '-m', `release: v${targetVersion}`])
+
   await execa('git', ['tag', `v${targetVersion}`])
   await execa('git', ['push', 'origin', `refs/tags/v${targetVersion}`])
+  await execa('git', ['push'])
 }
 
 async function publishToNpm() {
