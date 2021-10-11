@@ -93,7 +93,6 @@ async function generateChangelog() {
 async function pushToGithub() {
   await execa('git', ['tag', `v${targetVersion}`])
   await execa('git', ['push', 'origin', `refs/tags/v${targetVersion}`])
-  await execa('git', ['push'])
 }
 
 async function publishToNpm() {
