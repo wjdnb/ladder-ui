@@ -1,6 +1,6 @@
 {
   "name": "ladder-ui",
-  "version": "0.1.8-beta.1",
+  "version": "0.1.8",
   "description": "A Vue3 UI Library",
   "main": "lib/index.js",
   "module": "es/index.js",

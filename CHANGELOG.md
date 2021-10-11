@@ -1,3 +1,17 @@
+## [0.1.8-beta.1](https://github.com/Hgwxxdd/ladder-ui/compare/v0.1.8-bata.1...v0.1.8-beta.1) (2021-10-11)
+
+
+### Bug Fixes
+
+* **version:** change version name ([7f10111](https://github.com/Hgwxxdd/ladder-ui/commit/7f1011170c20202e8874e1bfd48f905297fd4925))
+
+
+### Features
+
+* **package.json:** remove commond ([5a12b09](https://github.com/Hgwxxdd/ladder-ui/commit/5a12b09b3ead450bc658779bbc28d96fb3baf987))
+
+
+
 ## [0.1.8-bata.0](https://github.com/Hgwxxdd/ladder-ui/compare/v0.1.7-beta.0...v0.1.8-bata.0) (2021-10-11)
 
 
