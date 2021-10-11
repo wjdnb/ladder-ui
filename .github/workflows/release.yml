@@ -16,6 +16,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '12'
-      - run: npx conventional-github-releaser -p angular
-        env:
-          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          
+      - name: Automatic Releases
+        uses: marvinpinto/action-automatic-releases@v1.2.1
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          files: |
+            CHANGELOG.md
