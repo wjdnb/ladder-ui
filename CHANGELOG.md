@@ -1,3 +1,17 @@
+## [0.1.11](https://github.com/Hgwxxdd/ladder-ui/compare/v0.1.10...v0.1.11) (2021-10-11)
+
+
+### Bug Fixes
+
+* **release:** changelog display ([5e00e44](https://github.com/Hgwxxdd/ladder-ui/commit/5e00e44909c10a45d1f2c39368437ff7da953b2e))
+
+
+### Features
+
+* **scripts:** add remove component scripts ([580cc50](https://github.com/Hgwxxdd/ladder-ui/commit/580cc50cb985df681873bbb85412d38d3fe2bf0e))
+
+
+
 ## [0.1.10](https://github.com/Hgwxxdd/ladder-ui/compare/v0.1.8...v0.1.10) (2021-10-11)
 
 
