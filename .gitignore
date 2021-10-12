@@ -1,15 +1,20 @@
-.DS_Store
+# dir
+
+
 node_modules
 dist
-
-docs/README.md
 lib
+es
+docs/question&summary
+
+# files
+
+.DS_Store
+docs/README.md
 output.js
 vue.config.js
-es
-
-docs/question&summary
 docs/pages/debug.vue
+tsconfig.tsbuildinfo
 
 # local env files
 .env.local

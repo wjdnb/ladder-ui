@@ -10,6 +10,7 @@
     "strict": true,
     "jsx": "react",
     "jsxFactory": "h",
+    "incremental": true,
     "jsxFragmentFactory": "Fragment",
 
     "skipLibCheck": true,
