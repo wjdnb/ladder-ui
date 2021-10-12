@@ -1,4 +1,5 @@
-import LRow from './row/row'
-import LCol from './col/col'
+export { default as LRow } from './row'
+export { default as LCol } from './col'
 
-export { LRow, LCol }
+export type { ColProps } from './col'
+export type { RowProps } from './row'

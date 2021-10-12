@@ -1,5 +1,5 @@
 import { defineComponent, h } from 'vue'
-import type { ExtractPropTypes, CSSProperties, PropType } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
 const inputProps = {
   placeholder: {
     type: String as PropType<string>,
@@ -11,9 +11,10 @@ const inputProps = {
   },
 }
 
-export type IpaceProps = Partial<ExtractPropTypes<typeof inputProps>>
+export type InputProps = Partial<ExtractPropTypes<typeof inputProps>>
 
 export default defineComponent({
+  name: 'LInput',
   props: inputProps,
   setup(props) {
     return () => (

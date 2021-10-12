@@ -1,3 +1,3 @@
-import LSpace from './space'
+export { default as LSpace } from './space'
 
-export { LSpace }
+export type { SpaceProps } from './space'

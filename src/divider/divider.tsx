@@ -1,16 +1,22 @@
 import { defineComponent, computed, h } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
 import className from '../_util/className'
-export default defineComponent({
-  props: {
-    dashed: {
-      type: Boolean,
-      default: false,
-    },
-    textAlign: {
-      type: String,
-      default: 'center',
-    },
+
+const dividerProps = {
+  dashed: {
+    type: Boolean as PropType<boolean>,
+    default: false,
   },
+  textAlign: {
+    type: String as PropType<string>,
+    default: 'center',
+  },
+}
+
+export type DividerProps = Partial<ExtractPropTypes<typeof dividerProps>>
+
+export default defineComponent({
+  props: dividerProps,
 
   setup(props, { slots }) {
     return () => {

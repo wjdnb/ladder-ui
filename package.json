@@ -14,7 +14,8 @@
     "build": "vue-cli-service build",
     "inspect": "vue-cli-service inspect > output.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "create:component": "node scripts/createComponent.js"
   },
   "dependencies": {},
   "devDependencies": {

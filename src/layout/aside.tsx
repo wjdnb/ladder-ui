@@ -1,13 +1,18 @@
 import { defineComponent, computed, CSSProperties, h } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
+
+const asideProps = {
+  width: {
+    type: Number as PropType<number>,
+    default: 300,
+  },
+}
+
+export type AsideProps = Partial<ExtractPropTypes<typeof asideProps>>
 
 export default defineComponent({
   name: 'LAside',
-  props: {
-    width: {
-      type: Number,
-      default: 300,
-    },
-  },
+  props: asideProps,
   setup(props, { slots }) {
     const styles = computed(() => {
       const style: CSSProperties = {}

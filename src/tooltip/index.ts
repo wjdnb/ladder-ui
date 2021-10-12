@@ -1,3 +1,3 @@
-import LTooltip from './tooltip.vue'
+export { default as LTooltip } from './tooltip'
 
-export { LTooltip }
+export type { TooltipProps } from './tooltip'

@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
-import Debug from '../pages/debug.vue'
+// import Debug from '../pages/debug.vue'
 
 // import Index from '../pages/homepage.vue'
 // import Template from '../components/template.vue'
@@ -23,11 +23,11 @@ const routes: Array<RouteRecordRaw> = [
   //   name: 'homepage',
   //   component: Index,
   // },
-  {
-    path: '/debug',
-    name: 'debug',
-    component: Debug,
-  },
+  // {
+  //   path: '/debug',
+  //   name: 'debug',
+  //   component: Debug,
+  // },
   // {
   //   path: '/docs',
   //   component: Template,

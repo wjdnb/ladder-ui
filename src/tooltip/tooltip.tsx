@@ -1,7 +1,13 @@
 import { defineComponent, ref, h } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
+
+const tooltipProps = {}
+
+export type TooltipProps = Partial<ExtractPropTypes<typeof tooltipProps>>
 
 export default defineComponent({
   name: 'LTooltip',
+  props: tooltipProps,
   setup(props, { slots }) {
     const titleVisible = ref(false)
 

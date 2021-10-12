@@ -1,18 +1,23 @@
 import { defineComponent, inject, computed, CSSProperties, h } from 'vue'
-import className from '../../_util/className'
+import type { ExtractPropTypes, PropType } from 'vue'
+import className from '../_util/className'
+
+const colProps = {
+  span: {
+    type: Number as PropType<number>,
+    default: 24,
+  },
+  offset: {
+    type: Number as PropType<number>,
+    default: 0,
+  },
+}
+
+export type ColProps = Partial<ExtractPropTypes<typeof colProps>>
 
 export default defineComponent({
   name: 'LCol',
-  props: {
-    span: {
-      type: Number,
-      default: 24,
-    },
-    offset: {
-      type: Number,
-      default: 0,
-    },
-  },
+  props: colProps,
   setup(props, { slots }) {
     const gutter = inject('gutter', { value: [0, 0] })
 

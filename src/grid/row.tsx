@@ -1,24 +1,29 @@
-import { defineComponent, provide, computed, PropType, h } from 'vue'
-import { JustifyContent, AlignItems } from '../../_util/type'
-import { isArray, isNumber } from '../../_util/assertion'
-import className from '../../_util/className'
+import { defineComponent, provide, computed, h } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
+import { JustifyContent, AlignItems } from '../_util/type'
+import { isArray, isNumber } from '../_util/assertion'
+import className from '../_util/className'
+
+const rowProps = {
+  gutter: {
+    type: Number,
+    default: 0,
+  },
+  justify: {
+    type: String as PropType<JustifyContent>,
+    default: 'flex-start',
+  },
+  align: {
+    type: String as PropType<AlignItems>,
+    default: 'flex-start',
+  },
+}
+
+export type RowProps = Partial<ExtractPropTypes<typeof rowProps>>
 
 export default defineComponent({
   name: 'LRow',
-  props: {
-    gutter: {
-      type: Number,
-      default: 0,
-    },
-    justify: {
-      type: String as PropType<JustifyContent>,
-      default: 'flex-start',
-    },
-    align: {
-      type: String as PropType<AlignItems>,
-      default: 'flex-start',
-    },
-  },
+  props: rowProps,
   setup(props, { slots }) {
     const gutter = computed(() => {
       if (isNumber(props.gutter)) {

@@ -1,13 +1,18 @@
 import { defineComponent, CSSProperties, computed, h } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
+
+const footerProps = {
+  height: {
+    type: Number as PropType<number>,
+    default: 0,
+  },
+}
+
+export type FooterProps = Partial<ExtractPropTypes<typeof footerProps>>
 
 export default defineComponent({
   name: 'LFooter',
-  props: {
-    height: {
-      type: Number,
-      default: 0,
-    },
-  },
+  props: footerProps,
   setup(props, { slots }) {
     const styles = computed(() => {
       const style: CSSProperties = {}

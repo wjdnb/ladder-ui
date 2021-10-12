@@ -1,7 +1,9 @@
-import LLayout from './layout'
-import LAside from './aside'
-import LMain from './main'
-import LFooter from './footer'
-import LHeader from './header'
+export { default as LLayout } from './layout'
+export { default as LAside } from './aside'
+export { default as LMain } from './main'
+export { default as LFooter } from './footer'
+export { default as LHeader } from './header'
 
-export { LLayout, LAside, LMain, LFooter, LHeader }
+export type { AsideProps } from './aside'
+export type { HeaderProps } from './header'
+export type { FooterProps } from './footer'

@@ -1,13 +1,18 @@
 import { defineComponent, CSSProperties, computed, h } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
+
+const headerProps = {
+  height: {
+    type: Number as PropType<number>,
+    default: 0,
+  },
+}
+
+export type HeaderProps = Partial<ExtractPropTypes<typeof headerProps>>
 
 export default defineComponent({
   name: 'LHeader',
-  props: {
-    height: {
-      type: Number,
-      default: 0,
-    },
-  },
+  props: headerProps,
   setup(props, { slots }) {
     const styles = computed(() => {
       const style: CSSProperties = {}

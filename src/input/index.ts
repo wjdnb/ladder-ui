@@ -1,3 +1,3 @@
-import LInput from './input'
+export { default as LInput } from './input'
 
-export { LInput }
+export type { InputProps } from './input'

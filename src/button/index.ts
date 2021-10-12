@@ -1,3 +1,3 @@
-import LButton from './button'
+export { default as LButton } from './button'
 
-export { LButton }
+export type { ButtonProps } from './button'

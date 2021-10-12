@@ -1,63 +1,85 @@
+const args = require('minimist')(process.argv.slice(2))
 const { SRC_DIR } = require('../ladder.config.js')
 const { join } = require('path')
 const { mkdirSync, existsSync, writeFileSync } = require('fs')
+const componentName = args._[0]
+let componentStructure = {}
+const { scssTemplate, tsxTemplate, indexTemplate } = require('./utils')
 
-function toUpperCase(word) {
-  return word
-    .split('')
-    .map((item, index) => (index === 0 ? item.toLocaleUpperCase() : item))
-    .join('')
-}
+async function generateComponent(targetDir, structure) {
+  if (!structure.name || !structure.type) return
 
-function createComponent(dir) {
-  const componentPath = join(SRC_DIR, dir)
-  const componentStylePath = join(componentPath, 'style')
-  const componentDemoPath = join(componentPath, 'demo')
-  const componentTestPath = join(componentPath, 'test')
+  switch (structure.type) {
+    case 'dir':
+      const dirPath = join(targetDir, structure.name)
+      if (!existsSync(dirPath)) {
+        generateDir(dirPath)
 
-  const styleFilePath = join(componentStylePath, `${dir}.scss`)
-  const tsxFilePath = join(componentPath, `${dir}.tsx`)
-  const indexFilePath = join(componentPath, `index.ts`)
-
-  const componentUnionPath = join(SRC_DIR, 'component.ts')
-  const componentStyleUnionPath = join(SRC_DIR, 'index.scss')
-
-  const tsxFileTemplate = `
-import { defineComponent, h } from 'vue'
-import type { ExtractPropTypes } from 'vue'
-
-const ${dir}Props = {
-
-}
-
-export type ${dir}Props = Partial<ExtractPropTypes<typeof ${dir}Props>>
-
-export default defineComponent({
-  props: ${dir}Props,
-  setup() {
-    return () => ()
+        if (structure.children) {
+          structure.children.forEach(item => {
+            generateComponent(dirPath, item)
+          })
+        }
+      }
+      break
+    case 'file':
+      const filePath = join(targetDir, `${structure.name}.${structure.suffix}`)
+      console.log(filePath)
+      if (!existsSync(filePath)) {
+        generateFile(filePath, structure.template)
+      }
+      break
+    default:
+      return
   }
-})`
-
-  const indexFileTemplate = `
-import L${toUpperCase(dir)} from './${dir}'
-export type { ${dir}Props } from './${dir}Props'
-export { L${toUpperCase(dir)} }
-`
-
-  if (existsSync(componentPath)) return
-
-  mkdirSync(componentPath)
-  mkdirSync(componentStylePath)
-  mkdirSync(componentDemoPath)
-  mkdirSync(componentTestPath)
-
-  writeFileSync(styleFilePath, ``)
-  writeFileSync(tsxFilePath, tsxFileTemplate.trim())
-  writeFileSync(indexFilePath, indexFileTemplate.trim())
-
-  // TODO
-  // Add the to component.ts & index.scss
 }
 
-createComponent('test')
+function generateComponentStructure(componentName) {
+  return {
+    name: componentName,
+    type: 'dir',
+    children: [
+      {
+        type: 'dir',
+        name: 'demo',
+        children: [],
+      },
+      {
+        type: 'dir',
+        name: 'style',
+        children: [
+          {
+            type: 'file',
+            suffix: 'scss',
+            name: `${componentName}`,
+            template: scssTemplate(componentName),
+          },
+        ],
+      },
+      {
+        type: 'file',
+        suffix: `tsx`,
+        name: `${componentName}`,
+        template: tsxTemplate(componentName),
+      },
+      {
+        type: 'file',
+        suffix: 'ts',
+        name: 'index',
+        template: indexTemplate(componentName),
+      },
+    ],
+  }
+}
+
+componentStructure = generateComponentStructure(componentName)
+
+function generateDir(path) {
+  mkdirSync(path)
+}
+
+function generateFile(path, template) {
+  writeFileSync(path, template)
+}
+
+generateComponent(SRC_DIR, componentStructure)

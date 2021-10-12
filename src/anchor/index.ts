@@ -1,4 +1,4 @@
-import LAnchor from './anchor'
-import LAnchorLink from './anchor-link'
+export { default as LAnchor } from './anchor'
+export { default as LAnchorLink } from './anchor-link'
 
-export { LAnchor, LAnchorLink }
+export type { AnchorLinkProps } from './anchor-link'

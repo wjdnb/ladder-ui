@@ -1,3 +1,3 @@
-import LDivider from './divider'
+export { default as LDivider } from './divider'
 
-export { LDivider }
+export type { DividerProps } from './divider'

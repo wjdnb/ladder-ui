@@ -14,15 +14,15 @@ const buttonProps = {
     default: 'medium',
   },
   space: {
-    type: Number,
+    type: Number as PropType<number>,
     default: 0,
   },
   disabled: {
-    type: Boolean,
+    type: Boolean as PropType<boolean>,
     default: false,
   },
   round: {
-    type: Boolean,
+    type: Boolean as PropType<boolean>,
     default: false,
   },
 }

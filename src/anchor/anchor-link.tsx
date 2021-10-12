@@ -1,17 +1,21 @@
 import { defineComponent, h } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
+const anchorLinkProps = {
+  title: {
+    type: String as PropType<string>,
+    default: '',
+  },
+  href: {
+    type: String as PropType<string>,
+    default: '',
+  },
+}
+
+export type AnchorLinkProps = Partial<ExtractPropTypes<typeof anchorLinkProps>>
 
 export default defineComponent({
   name: 'LAnchorLink',
-  props: {
-    title: {
-      type: String,
-      default: '',
-    },
-    href: {
-      type: String,
-      default: '',
-    },
-  },
+  props: anchorLinkProps,
   setup(props) {
     const scroll = (id: any) => {
       const element = document.querySelector(`#${id}`)

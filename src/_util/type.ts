@@ -1,8 +1,10 @@
 import type { App } from 'vue'
 
-export const tuple = <T extends string[]>(...args: T) => args
+export type Component = {
+  name: string
+}
 
-export declare type SFCWithInstall<T> = T & {
+export type ComponentWithInstall = Component & {
   install(app: App): void
 }
 
