@@ -1,10 +1,9 @@
 # dir
 
-
 node_modules
 dist
-lib
 es
+lib
 docs/question&summary
 
 # files

@@ -10,9 +10,9 @@
     "strict": true,
     "jsx": "react",
     "jsxFactory": "h",
-    "incremental": true,
     "jsxFragmentFactory": "Fragment",
 
+    "incremental": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -29,5 +29,13 @@
     "allowJs": true,
     "lib": ["ESNext", "DOM", "dom.iterable", "scripthost"]
   },
+  "include": [
+    "src/**/*.vue",
+    "docs/**/*.vue",
+    "src/**/*.tsx",
+    "docs/**/*.tsx",
+    "src/**/*.ts",
+    "docs/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

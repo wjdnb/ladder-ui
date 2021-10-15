@@ -27,10 +27,10 @@ const {
 } = require('./utils.js')
 
 const steps = [
-  {
-    name: 'Run Tests',
-    use: runTest,
-  },
+  // {
+  //   name: 'Run Tests',
+  //   use: runTest,
+  // },
   {
     name: 'Copy Source Code',
     use: copySourceCode,
@@ -142,7 +142,7 @@ async function removeUselessFile(dir) {
 
 ;(async function build() {
   await runBuildSteps().then(() => {
-    const success = `${greenText('DONE')} Build complete! \n`
+    const success = `\n ${greenText('DONE')} Build complete! \n`
     console.log(success)
   })
 })()

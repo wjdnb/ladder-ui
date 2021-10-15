@@ -49,7 +49,6 @@ import { defineComponent, h } from 'vue'
 import type { ExtractPropTypes } from 'vue'
 
 const ${name}Props = {
-
 }
 
 export type ${name}Props = Partial<ExtractPropTypes<typeof ${name}Props>>

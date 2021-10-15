@@ -1,9 +1,5 @@
-import { App } from 'vue'
-import * as component from './component'
+export * from './components'
 
-export default function install(app: App) {
-  const components: Record<string, any> = component
-  Object.keys(components as any).forEach(item => {
-    app.component(item, components[item])
-  })
-}
+export { default } from './_util/preset'
+
+export { ladderInit } from './_util/ladder-init'

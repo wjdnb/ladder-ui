@@ -16,6 +16,7 @@ const dividerProps = {
 export type DividerProps = Partial<ExtractPropTypes<typeof dividerProps>>
 
 export default defineComponent({
+  name: 'LDivider',
   props: dividerProps,
 
   setup(props, { slots }) {

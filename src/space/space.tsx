@@ -32,6 +32,7 @@ const sizeMap = new Map([
 export type SpaceProps = Partial<ExtractPropTypes<typeof spaceProps>>
 
 export default defineComponent({
+  name: 'LSpace',
   props: spaceProps,
   setup(props, { slots }) {
     const gap = computed(() => {
