@@ -3970,9 +3970,95 @@ es6-weak-map@^2.0.1:
     es6-iterator "^2.0.3"
     es6-symbol "^3.1.1"
 
-esbuild@^0.12.11:
-  version "0.12.29"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.29.tgz#be602db7c4dc78944a9dbde0d1ea19d36c1f882d"
+esbuild-android-arm64@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-android-arm64/-/esbuild-android-arm64-0.14.3.tgz#f0fc0a892dd6f2f42baf68f9ac24c9bfcfdaba20"
+
+esbuild-darwin-64@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-darwin-64/-/esbuild-darwin-64-0.14.3.tgz#074268b97df08dc2ea60ddd3c29b05fd93ff63d3"
+
+esbuild-darwin-arm64@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.3.tgz#72a62c7e5c58a2321f0bb839f1368878d4a5a814"
+
+esbuild-freebsd-64@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-freebsd-64/-/esbuild-freebsd-64-0.14.3.tgz#63f507254f41ccbab97bb6dce655e7dbc127f351"
+
+esbuild-freebsd-arm64@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.14.3.tgz#6520f6c8339df943633586d0d597ac2ee1f1958d"
+
+esbuild-linux-32@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-32/-/esbuild-linux-32-0.14.3.tgz#813d7baf2d33675c9264a07b09a26c39d588abb2"
+
+esbuild-linux-64@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-64/-/esbuild-linux-64-0.14.3.tgz#6356ff2d2c6ec978eb6e794a8891cc5cfadab3f1"
+
+esbuild-linux-arm64@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-arm64/-/esbuild-linux-arm64-0.14.3.tgz#a289bb67a5207e021d1ac8cae3532771eda473a6"
+
+esbuild-linux-arm@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-arm/-/esbuild-linux-arm-0.14.3.tgz#b193de64458d4829be18206e58d127296367c189"
+
+esbuild-linux-mips64le@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.14.3.tgz#d3c826fc746f1cbf3aea696017b001625ea28b59"
+
+esbuild-linux-ppc64le@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.14.3.tgz#483974c92555eefe86d623145ff5f328074b6c9b"
+
+esbuild-netbsd-64@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-netbsd-64/-/esbuild-netbsd-64-0.14.3.tgz#76442f9d2d6e6dc796d18eb321256ccdc68ead53"
+
+esbuild-openbsd-64@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-openbsd-64/-/esbuild-openbsd-64-0.14.3.tgz#13b0adfd39e165f0dfd30af3e629c601b1b5fa36"
+
+esbuild-sunos-64@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-sunos-64/-/esbuild-sunos-64-0.14.3.tgz#f8ce1a0c6f165b82d589c7f3de01baf094587fd2"
+
+esbuild-windows-32@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-windows-32/-/esbuild-windows-32-0.14.3.tgz#f555cbf0fca5974c3c303d9d9ff0d39e08f26916"
+
+esbuild-windows-64@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-windows-64/-/esbuild-windows-64-0.14.3.tgz#02c9804f9ca5e587ccb8b18e46a00f9237e54689"
+
+esbuild-windows-arm64@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild-windows-arm64/-/esbuild-windows-arm64-0.14.3.tgz#8bcf737feddde3ccf4d2d6d581b2422b45a9b6e2"
+
+esbuild@^0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.14.3.tgz#38db1d26aaeccc43f478225974538e2c4de9d6b1"
+  optionalDependencies:
+    esbuild-android-arm64 "0.14.3"
+    esbuild-darwin-64 "0.14.3"
+    esbuild-darwin-arm64 "0.14.3"
+    esbuild-freebsd-64 "0.14.3"
+    esbuild-freebsd-arm64 "0.14.3"
+    esbuild-linux-32 "0.14.3"
+    esbuild-linux-64 "0.14.3"
+    esbuild-linux-arm "0.14.3"
+    esbuild-linux-arm64 "0.14.3"
+    esbuild-linux-mips64le "0.14.3"
+    esbuild-linux-ppc64le "0.14.3"
+    esbuild-netbsd-64 "0.14.3"
+    esbuild-openbsd-64 "0.14.3"
+    esbuild-sunos-64 "0.14.3"
+    esbuild-windows-32 "0.14.3"
+    esbuild-windows-64 "0.14.3"
+    esbuild-windows-arm64 "0.14.3"
 
 escalade@^3.1.1:
   version "3.1.1"
