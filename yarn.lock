@@ -3970,9 +3970,100 @@ es6-weak-map@^2.0.1:
     es6-iterator "^2.0.3"
     es6-symbol "^3.1.1"
 
-esbuild@^0.12.11:
-  version "0.12.29"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.29.tgz#be602db7c4dc78944a9dbde0d1ea19d36c1f882d"
+esbuild-android-arm64@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-android-arm64/-/esbuild-android-arm64-0.14.8.tgz#69324e08ba68c7d9a541e7b825d7235b83e17bd6"
+
+esbuild-darwin-64@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-darwin-64/-/esbuild-darwin-64-0.14.8.tgz#7176b692b9de746ba2f9dd4dd81dc4f1b7670786"
+
+esbuild-darwin-arm64@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.8.tgz#59167584e58428877e48e05c4cca58755f843327"
+
+esbuild-freebsd-64@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-freebsd-64/-/esbuild-freebsd-64-0.14.8.tgz#00b7d6e00abba9c2eccc9acd576c796333671e9c"
+
+esbuild-freebsd-arm64@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.14.8.tgz#57f0cd5a1cb37fa2c0e84e780677fe62f1e8c894"
+
+esbuild-linux-32@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-32/-/esbuild-linux-32-0.14.8.tgz#bbf3e5d3fb30f949030d0c2241ac93a172917d56"
+
+esbuild-linux-64@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-64/-/esbuild-linux-64-0.14.8.tgz#08631e9e0da613603bcec782f29fecbc6f4596de"
+
+esbuild-linux-arm64@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-arm64/-/esbuild-linux-arm64-0.14.8.tgz#206d39c8dfbb7c72aa2f5fc52f7402b5b8a77366"
+
+esbuild-linux-arm@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-arm/-/esbuild-linux-arm-0.14.8.tgz#e28e70420d187f5e403bfa4a72df676d53d707fd"
+
+esbuild-linux-mips64le@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.14.8.tgz#04997ac1a0df794a4d5e04d78015863d48490590"
+
+esbuild-linux-ppc64le@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.14.8.tgz#1827378feff9702c156047ba118c1f3bd74da67e"
+
+esbuild-linux-s390x@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-s390x/-/esbuild-linux-s390x-0.14.8.tgz#200ac44cda59b81135b325c3a29d016969650876"
+
+esbuild-netbsd-64@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-netbsd-64/-/esbuild-netbsd-64-0.14.8.tgz#8159d8eae111f80ea6e4cbfa5d4cf658388a72d4"
+
+esbuild-openbsd-64@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-openbsd-64/-/esbuild-openbsd-64-0.14.8.tgz#2a9498d881a3ab94927c724f34dd1160eef1f3b8"
+
+esbuild-sunos-64@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-sunos-64/-/esbuild-sunos-64-0.14.8.tgz#2447de7d79848ad528c7d44caab4938eb8f5a0cc"
+
+esbuild-windows-32@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-windows-32/-/esbuild-windows-32-0.14.8.tgz#3287281552d7e4c851b3106940ff5826f518043e"
+
+esbuild-windows-64@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-windows-64/-/esbuild-windows-64-0.14.8.tgz#b4052868438b4f17b5c2a908cf344ed2bd267c38"
+
+esbuild-windows-arm64@0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild-windows-arm64/-/esbuild-windows-arm64-0.14.8.tgz#512d06097cb4b848526a37c48a47223f1c6cc667"
+
+esbuild@^0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.14.8.tgz#f60a07ca9400d61d09a98f96d666c50613972550"
+  optionalDependencies:
+    esbuild-android-arm64 "0.14.8"
+    esbuild-darwin-64 "0.14.8"
+    esbuild-darwin-arm64 "0.14.8"
+    esbuild-freebsd-64 "0.14.8"
+    esbuild-freebsd-arm64 "0.14.8"
+    esbuild-linux-32 "0.14.8"
+    esbuild-linux-64 "0.14.8"
+    esbuild-linux-arm "0.14.8"
+    esbuild-linux-arm64 "0.14.8"
+    esbuild-linux-mips64le "0.14.8"
+    esbuild-linux-ppc64le "0.14.8"
+    esbuild-linux-s390x "0.14.8"
+    esbuild-netbsd-64 "0.14.8"
+    esbuild-openbsd-64 "0.14.8"
+    esbuild-sunos-64 "0.14.8"
+    esbuild-windows-32 "0.14.8"
+    esbuild-windows-64 "0.14.8"
+    esbuild-windows-arm64 "0.14.8"
 
 escalade@^3.1.1:
   version "3.1.1"
