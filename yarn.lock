@@ -879,6 +879,10 @@
     ts-node "^9"
     tslib "^2"
 
+"@esbuild/linux-loong64@0.15.3":
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-loong64/-/linux-loong64-0.15.3.tgz#0a39aa5c8a7639828914e6edc064ded72ff68d3a"
+
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.3.tgz#9e42981ef035beb3dd49add17acb96e8ff6f394c"
@@ -3970,9 +3974,111 @@ es6-weak-map@^2.0.1:
     es6-iterator "^2.0.3"
     es6-symbol "^3.1.1"
 
-esbuild@^0.12.11:
-  version "0.12.29"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.29.tgz#be602db7c4dc78944a9dbde0d1ea19d36c1f882d"
+esbuild-android-64@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-android-64/-/esbuild-android-64-0.15.3.tgz#8096ff8bd80ac855a35e28ad04a67e76f18754ba"
+
+esbuild-android-arm64@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-android-arm64/-/esbuild-android-arm64-0.15.3.tgz#70fea382b5eea6f033a42c2d19fa70f8fde2d31e"
+
+esbuild-darwin-64@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-darwin-64/-/esbuild-darwin-64-0.15.3.tgz#4902b82c23c91795b40af1341bf73d03f28c7706"
+
+esbuild-darwin-arm64@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.15.3.tgz#7143f443c9a5da355cdb2fbfbf129708d75902ab"
+
+esbuild-freebsd-64@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-freebsd-64/-/esbuild-freebsd-64-0.15.3.tgz#fb28355d9a59dff40427d74602b452597a031601"
+
+esbuild-freebsd-arm64@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.15.3.tgz#c5542f88b48bfef1dbb910d224a9c1dd7f6d86ff"
+
+esbuild-linux-32@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-32/-/esbuild-linux-32-0.15.3.tgz#0b127edc535540e96df1df5007764a03018d1157"
+
+esbuild-linux-64@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-64/-/esbuild-linux-64-0.15.3.tgz#53949de49ffd4b079c234aecc936a9a5ada977db"
+
+esbuild-linux-arm64@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-arm64/-/esbuild-linux-arm64-0.15.3.tgz#b6bf7ebbc453f71dc96f535a466cd144edf81748"
+
+esbuild-linux-arm@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-arm/-/esbuild-linux-arm-0.15.3.tgz#01d75bd360f7b96243e1c13e389e2e1a514b8b00"
+
+esbuild-linux-mips64le@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.15.3.tgz#687e6acfa6b8818a67398ac18615a4fac18647d9"
+
+esbuild-linux-ppc64le@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.15.3.tgz#0c502cdf48a635460c80c95e620676a78a2f60e6"
+
+esbuild-linux-riscv64@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-riscv64/-/esbuild-linux-riscv64-0.15.3.tgz#ee99fe2c1636f0e7127e13fd21783ec7b350e2f6"
+
+esbuild-linux-s390x@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-linux-s390x/-/esbuild-linux-s390x-0.15.3.tgz#2e3491e04ad8108f928c94291b38e8529370f5e1"
+
+esbuild-netbsd-64@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-netbsd-64/-/esbuild-netbsd-64-0.15.3.tgz#8f41cb1c0c26befbf0bcd50e89580f66ec45bb32"
+
+esbuild-openbsd-64@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-openbsd-64/-/esbuild-openbsd-64-0.15.3.tgz#fa2e84480fe043480401c73fdfb944ba2d21826d"
+
+esbuild-sunos-64@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-sunos-64/-/esbuild-sunos-64-0.15.3.tgz#23b8904294344075ce5020155ddd4e28d079cc10"
+
+esbuild-windows-32@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-windows-32/-/esbuild-windows-32-0.15.3.tgz#472a5d09bcf4c1ebf2761c73214f15f6c5a16583"
+
+esbuild-windows-64@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-windows-64/-/esbuild-windows-64-0.15.3.tgz#77438af8bd79df722d5af6e4e527bd7d1c48dc57"
+
+esbuild-windows-arm64@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild-windows-arm64/-/esbuild-windows-arm64-0.15.3.tgz#68810c8ba6ab93e42e3aa323f37f6538f0379df6"
+
+esbuild@^0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.15.3.tgz#d4180ef567a4563de425e2b2166f871467cc2b0b"
+  optionalDependencies:
+    "@esbuild/linux-loong64" "0.15.3"
+    esbuild-android-64 "0.15.3"
+    esbuild-android-arm64 "0.15.3"
+    esbuild-darwin-64 "0.15.3"
+    esbuild-darwin-arm64 "0.15.3"
+    esbuild-freebsd-64 "0.15.3"
+    esbuild-freebsd-arm64 "0.15.3"
+    esbuild-linux-32 "0.15.3"
+    esbuild-linux-64 "0.15.3"
+    esbuild-linux-arm "0.15.3"
+    esbuild-linux-arm64 "0.15.3"
+    esbuild-linux-mips64le "0.15.3"
+    esbuild-linux-ppc64le "0.15.3"
+    esbuild-linux-riscv64 "0.15.3"
+    esbuild-linux-s390x "0.15.3"
+    esbuild-netbsd-64 "0.15.3"
+    esbuild-openbsd-64 "0.15.3"
+    esbuild-sunos-64 "0.15.3"
+    esbuild-windows-32 "0.15.3"
+    esbuild-windows-64 "0.15.3"
+    esbuild-windows-arm64 "0.15.3"
 
 escalade@^3.1.1:
   version "3.1.1"
