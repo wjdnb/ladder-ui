@@ -879,6 +879,94 @@
     ts-node "^9"
     tslib "^2"
 
+"@esbuild/android-arm64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/android-arm64/-/android-arm64-0.17.1.tgz#e2f5bc6588a98d565a25a2f61e25adf754061aec"
+
+"@esbuild/android-arm@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/android-arm/-/android-arm-0.17.1.tgz#6de8d65b56414adce73a385d92344d99981347cf"
+
+"@esbuild/android-x64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/android-x64/-/android-x64-0.17.1.tgz#9de479c2775cdadd1836dc57923eabcb36b90493"
+
+"@esbuild/darwin-arm64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/darwin-arm64/-/darwin-arm64-0.17.1.tgz#86c9dce9481a5aaf51d68bab6b499e2192035c2e"
+
+"@esbuild/darwin-x64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/darwin-x64/-/darwin-x64-0.17.1.tgz#8c396dfb3ac35856778a99867614d559f2d5ce66"
+
+"@esbuild/freebsd-arm64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/freebsd-arm64/-/freebsd-arm64-0.17.1.tgz#22de2b3d5be3ade9066cf27e96f919d72e4cccb4"
+
+"@esbuild/freebsd-x64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/freebsd-x64/-/freebsd-x64-0.17.1.tgz#224c915e03cdc66bc59a9578c97f15c75bbaa638"
+
+"@esbuild/linux-arm64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-arm64/-/linux-arm64-0.17.1.tgz#d393f878cb7d163705b35fb38f1d82fe2190d096"
+
+"@esbuild/linux-arm@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-arm/-/linux-arm-0.17.1.tgz#7249342edfda0431ae17b66de025dcadfdada222"
+
+"@esbuild/linux-ia32@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-ia32/-/linux-ia32-0.17.1.tgz#765ab53b1ba4fda356437690cff20dffaa5b2c07"
+
+"@esbuild/linux-loong64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-loong64/-/linux-loong64-0.17.1.tgz#a37eab49507026acc6f701a3a994550bbb2cc589"
+
+"@esbuild/linux-mips64el@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-mips64el/-/linux-mips64el-0.17.1.tgz#920d6f203da3b89bf868f7b3f6eb66374c24f92e"
+
+"@esbuild/linux-ppc64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-ppc64/-/linux-ppc64-0.17.1.tgz#73ab32a62587ebb5143557da531bd8d4709bcbc0"
+
+"@esbuild/linux-riscv64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-riscv64/-/linux-riscv64-0.17.1.tgz#b001c1542146743ee46090b08d3635be79294eed"
+
+"@esbuild/linux-s390x@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-s390x/-/linux-s390x-0.17.1.tgz#2afd08351e59835fa92f7c58f588060ccdd3d260"
+
+"@esbuild/linux-x64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-x64/-/linux-x64-0.17.1.tgz#e04a87c3b2fd70e391540c4b8e27f3f6a08076db"
+
+"@esbuild/netbsd-x64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/netbsd-x64/-/netbsd-x64-0.17.1.tgz#345a1e1154e7ebea47e53e779ede5f5d098d0d32"
+
+"@esbuild/openbsd-x64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/openbsd-x64/-/openbsd-x64-0.17.1.tgz#c1766ae147f2ed38ee5426a89ed542893bc5e3db"
+
+"@esbuild/sunos-x64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/sunos-x64/-/sunos-x64-0.17.1.tgz#c9fa2ff0ff368092c82c6e5dc133882b43f96568"
+
+"@esbuild/win32-arm64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/win32-arm64/-/win32-arm64-0.17.1.tgz#8c136879809cda60373ea45d680f75c7e34dd925"
+
+"@esbuild/win32-ia32@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/win32-ia32/-/win32-ia32-0.17.1.tgz#fc4b52c2dcdcaf9e657f252e0e04e089c528f08e"
+
+"@esbuild/win32-x64@0.17.1":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.17.1.tgz#f6e5648e99bed24078cbed82dad7660d984f42ba"
+
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.3.tgz#9e42981ef035beb3dd49add17acb96e8ff6f394c"
@@ -3970,9 +4058,32 @@ es6-weak-map@^2.0.1:
     es6-iterator "^2.0.3"
     es6-symbol "^3.1.1"
 
-esbuild@^0.12.11:
-  version "0.12.29"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.29.tgz#be602db7c4dc78944a9dbde0d1ea19d36c1f882d"
+esbuild@^0.17.1:
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.17.1.tgz#31756765ae7865332670daef8ac3358b6264a486"
+  optionalDependencies:
+    "@esbuild/android-arm" "0.17.1"
+    "@esbuild/android-arm64" "0.17.1"
+    "@esbuild/android-x64" "0.17.1"
+    "@esbuild/darwin-arm64" "0.17.1"
+    "@esbuild/darwin-x64" "0.17.1"
+    "@esbuild/freebsd-arm64" "0.17.1"
+    "@esbuild/freebsd-x64" "0.17.1"
+    "@esbuild/linux-arm" "0.17.1"
+    "@esbuild/linux-arm64" "0.17.1"
+    "@esbuild/linux-ia32" "0.17.1"
+    "@esbuild/linux-loong64" "0.17.1"
+    "@esbuild/linux-mips64el" "0.17.1"
+    "@esbuild/linux-ppc64" "0.17.1"
+    "@esbuild/linux-riscv64" "0.17.1"
+    "@esbuild/linux-s390x" "0.17.1"
+    "@esbuild/linux-x64" "0.17.1"
+    "@esbuild/netbsd-x64" "0.17.1"
+    "@esbuild/openbsd-x64" "0.17.1"
+    "@esbuild/sunos-x64" "0.17.1"
+    "@esbuild/win32-arm64" "0.17.1"
+    "@esbuild/win32-ia32" "0.17.1"
+    "@esbuild/win32-x64" "0.17.1"
 
 escalade@^3.1.1:
   version "3.1.1"
