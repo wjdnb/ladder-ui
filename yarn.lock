@@ -9094,11 +9094,9 @@ tr46@~0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
 
-transliteration@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/transliteration/-/transliteration-2.2.0.tgz#e6333cc74b25ef4465bc27086ed8465c9a19211d"
-  dependencies:
-    yargs "^16.1.0"
+transliteration@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/transliteration/-/transliteration-2.6.1.tgz#dadd5b6812d08815f5dc4a53122f8f8355fbb0f1"
 
 trim-newlines@^3.0.0:
   version "3.0.1"
@@ -9937,7 +9935,7 @@ yargs@^15.4.1:
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
 
-yargs@^16.0.0, yargs@^16.1.0, yargs@^16.2.0:
+yargs@^16.0.0, yargs@^16.2.0:
   version "16.2.0"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
   dependencies:
