@@ -70,7 +70,7 @@
     "sass": "^1.34.1",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.0.0",
-    "transliteration": "^2.2.0",
+    "transliteration": "^2.6.1",
     "ts-jest": "^26.4.1",
     "ts-loader": "^9.2.4",
     "tslib": "^2.3.0",
